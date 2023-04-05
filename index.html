@@ -21,8 +21,9 @@
       margin: 0%;
       padding: 0%;
       background-color: #000;
-      overflow: hidden;
       color: #fff;
+      font-family: 'Supermercado One', cursive;
+
     }
 
     .progressWrapper {
@@ -62,12 +63,7 @@
       background-color: black;
     }
 
-    body {
-      margin: 0%;
-      padding: 0px;
-      font-family: 'Supermercado One', cursive;
 
-    }
 
     header {
       background-color: var(--bgcolor);
@@ -102,9 +98,34 @@
       box-sizing: border-box;
       padding: 0 4rem 0 0.5rem;
     }
-    .menu{
-        cursor: pointer;
+
+    .menu {
+      cursor: pointer;
     }
+
+    .navigationButton {
+      width: 2.3rem;
+      height: 2rem;
+      /*Adjust menu icon height from here*/
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      display: none;
+      /*Hide menu button*/
+    }
+
+    .topLine,
+    .bottomLine {
+      width: 2.3rem;
+      border: 2px solid var(--color);
+    }
+
+    .centerLine {
+      width: 1.7rem;
+      border: 2px solid var(--color);
+    }
+
     .logo {
       text-decoration: none;
       font-family: 'Pirata One', cursive;
@@ -122,7 +143,6 @@
     .profilePictureContainer {
       width: 50%;
       display: flex;
-      box-sizing: border-box;
     }
 
     .descriptionContainer {
@@ -158,16 +178,17 @@
       border: 3px solid var(--color);
       border-bottom-left-radius: 50%;
       border-top-left-radius: 50%;
-      margin: 24px -20px 0px 0px;
+      margin-top: 24px;
+
     }
 
     .profilePictureImageContainer {
-    width: 32.5rem;
-    height: 31rem;
-    border-bottom-left-radius: 50%;
-    border-top-left-radius: 50%;
-    margin: -9px 0rem 0rem 1.1rem;
-}
+      width: 32.5rem;
+      height: 31rem;
+      border-bottom-left-radius: 50%;
+      border-top-left-radius: 50%;
+      margin: -9px 0rem 0rem 1.1rem;
+    }
 
     .profilePicture {
       width: 100%;
@@ -190,7 +211,7 @@
       justify-content: space-between;
       align-items: center;
       box-sizing: border-box;
-      padding-left: 2.15rem;
+      padding-left: 2.188rem;
     }
 
     .socialMediaLogoContainer {
@@ -202,33 +223,276 @@
       cursor: pointer;
     }
 
-#linkedin{
-  width: 40px;
-}
-#codechef{
-  width: 19.5px;
-  height: auto;
-}
-#github{
-  width: 27px;
-}
-#discord{
-  width: 32.8px;
-}
+    #linkedin {
+      width: 40px;
+    }
 
-    /*Tablet*/
-    @media only screen and (max-device-width: 1112px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
-      .logoSection {
-        width: 15rem;
-        padding-left: 60px;
+    #codechef {
+      width: 19.5px;
+      height: auto;
+    }
+
+    #github {
+      width: 27px;
+    }
+
+    #discord {
+      width: 32.8px;
+    }
+
+    /*Desktop*/
+    @media screen and (max-width:1383px) and (max-height: 900px) {
+
+      /*
+  * Putting description left hand side. 
+  * It was in center before,
+  * Then moving it to right 3rem to align it with
+  * logo and social media icons
+  */
+      .descriptionContainer {
+        justify-content: unset;
+        padding-left: 3rem;
       }
 
+      .profilePictureContainer {
+        justify-content: flex-end;
+        padding-right: 3.1rem;
+      }
+
+      /*
+  * Description width was static,
+  * Now it is dynamic 
+  */
+      .description {
+        width: 95%;
+      }
+
+      .navigation {
+        padding: 0 3rem 0 0.5rem;
+      }
+    }
+
+    @media screen and (max-width:1250px)and (max-height: 900px) {
+
+      /*
+  * Profile size reduced
+  */
+      .profilePictureFrame {
+        width: 30.5rem;
+        height: 27.8rem;
+        border: 3px solid var(--color);
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+        margin: 24px 0px 0px 0px;
+
+      }
+
+      .profilePictureImageContainer {
+        width: 28.5rem;
+        height: 27rem;
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+        margin: -9px 0rem 0rem 1.1rem;
+      }
+
+      /*
+  * description size reduced
+  */
+      .helloWord {
+        font-size: 2.1rem;
+      }
+
+      .thereWord {
+        font-size: 2.5rem;
+      }
+
+      .descriptionSentence {
+        font-size: 1.7rem;
+      }
+    }
+
+    @media screen and (max-width:1050px) {
+
+      /* Reducing the outer space  */
+      .logoSection {
+        width: 13rem;
+      }
+
+      .navigation {
+        padding: 0 1rem 0 0.5rem;
+      }
+
+      .descriptionContainer {
+        justify-content: unset;
+        padding-left: 1rem;
+      }
+
+      .profilePictureContainer {
+        justify-content: flex-end;
+        padding-right: 1.1rem;
+      }
+
+      .socialMedia {
+        padding-left: 0.188rem;
+      }
+    }
+
+
+    /*Ipad pro or portrait display*/
+    @media only screen and (max-device-width: 1314px) and (max-device-height: 1455px) and (-webkit-min-device-pixel-ratio: 2) {
+
+      /*Header*/
       nav {
         height: 12rem;
       }
 
+      .logoSection {
+        width: 12rem;
+        padding-left: 2rem;
+      }
+
+      .logo {
+        font-size: 3rem;
+      }
+
       .navigation {
-        font-size: 2.3rem;
+        font-size: 2.4rem;
+        width: 46rem;
+        padding: 0 4rem 0 0.5rem;
+      }
+
+      /*Profile*/
+      .profile {
+        flex-direction: column-reverse;
+        height: calc(100vh - 19rem);
+      }
+
+      /*Description*/
+      .descriptionContainer {
+        justify-content: unset;
+        width: 100%;
+        padding-left: 2rem;
+      }
+
+      .description {
+        width: 95%;
+      }
+
+      .helloWord {
+        font-size: 3.2rem;
+      }
+
+      .thereWord {
+        font-size: 3.7rem;
+      }
+
+      .descriptionSentence {
+        font-size: 2.7rem;
+      }
+
+      /*Profile Picture*/
+      .profilePictureContainer {
+        padding-top: unset;
+        padding-right: 0px;
+        width: 100%;
+        align-items: flex-end;
+        justify-content: flex-end;
+        overflow: hidden;
+      }
+
+      .profilePictureFrame {
+        width: 39rem;
+        height: 37.5rem;
+        border: 3px solid var(--color);
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+        margin: 0%;
+        border-right: unset;
+      }
+
+      .profilePictureImageContainer {
+        width: 39.5rem;
+        height: 37rem;
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+
+      }
+
+      /*Social Media*/
+      .profileFooter {
+        align-items: center;
+      }
+
+      .socialMediaLogoContainer {
+        align-items: unset;
+      }
+
+      .socialMedia {
+        padding-left: 1.5rem;
+      }
+
+      #linkedin {
+        width: 60px;
+      }
+
+      #codechef {
+        width: 25.5px;
+        height: auto;
+      }
+
+      #github {
+        width: 37px;
+      }
+
+      #discord {
+        width: 42.8px;
+      }
+
+      /*Removing Line*/
+      .navigation,
+      .socialMedia {
+        border: none;
+      }
+    }
+
+    /*Ipad*/
+    @media only screen and (max-device-width: 820px) and (max-device-height: 1180px) and (-webkit-min-device-pixel-ratio: 2) {
+
+      /*Header*/
+      nav {
+        height: 9rem;
+      }
+
+      .logoSection {
+        padding-left: 1rem;
+      }
+
+      .navigation {
+        width: unset;
+        padding: 0 1rem 0 0.5rem;
+      }
+
+      /*Showing menu button and hiding menu options*/
+      .navigationButton {
+        display: flex;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      /*Profile*/
+      .profile {
+        height: calc(100vh - 18rem);
+      }
+
+      /*Description*/
+      .descriptionContainer {
+        padding-left: 0.9rem;
+      }
+
+      .description {
+        width: 100%;
       }
 
       .helloWord {
@@ -240,63 +504,426 @@
       }
 
       .descriptionSentence {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
       }
 
-      .description {
-        width: 95%;
-      }
+      /*Profile Picture*/
 
       .profilePictureFrame {
-        border-right: unset;
-        width: 40.875rem;
-        height: 37.938rem;
+        width: 29rem;
+        height: 28.5rem;
+        border: 3px solid var(--color);
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
         margin: 0%;
-      }
-
-      .profileFooter {
-        align-items: center;
+        border-right: unset;
       }
 
       .profilePictureImageContainer {
-        width: 38.813rem;
-        height: 36.875rem;
-        margin: -15px 0rem 0rem 2rem;
+        width: 29.5rem;
+        height: 28rem;
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
 
       }
 
-      .profilePictureContainer {
-        padding-top: unset;
-        padding-right: 0px;
-        width: 100%;
-        align-items: flex-end;
+      /*Social Media*/
+      .profileFooter {
+        height: 8rem;
       }
 
-      .descriptionContainer {
-        width: 100%;
-        height: 30rem;
-
-      }
-
-      .profile {
-        flex-direction: column-reverse;
-        height: calc(100vh - 19rem);
-        
-      }
-
-      .navigation,
       .socialMedia {
-        border: none;
+        padding-left: 0.5rem;
       }
     }
 
+    /*Surface Pro 7*/
+    @media only screen and (max-device-width: 912px) and (max-device-height: 1368px) and (-webkit-min-device-pixel-ratio: 2) {
+
+      /*Navigation*/
+      .navigation {
+        width: unset;
+        padding: 0 2rem 0 0.5rem;
+      }
+
+      /*Showing menu button and hiding menu options*/
+      .navigationButton {
+        display: flex;
+      }
+
+      .menu {
+        display: none;
+      }
+
+    }
+
+    /*Ipad and ipad mini*/
+    @media only screen and (max-device-width: 768px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+
+      /*Navigation*/
+      .navigation {
+        width: unset;
+        padding: 0 1rem 0 0.5rem;
+      }
+
+      /*Profile*/
+      .profile {
+        height: calc(100vh - 15rem);
+      }
+
+      /*Description*/
+      .helloWord {
+        font-size: 2.5rem;
+      }
+
+      .thereWord {
+        font-size: 3rem;
+      }
+
+      .descriptionSentence {
+        font-size: 2rem;
+      }
+    }
+
+    /*Surface Duo double display
+    @media only screen and (max-device-width: 1114px) and (max-device-height: 720px) {
+
+      //Profile Header
+      nav {
+        height: 6rem;
+      }
+
+      .logoSection {
+        width: 16rem;
+        padding-left: 1rem;
+      }
+
+      .logo {
+        font-size: 2.5rem;
+      }
+
+      .navigation {
+        width: unset;
+        padding: 0 2rem 0 0.5rem;
+      }
+
+     //Showing menu button and hiding menu options
+      .navigationButton {
+        display: flex;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      //Profile
+      .profile {
+        height: calc(100vh - 12.3rem);
+      }
+
+      //Profile Picture
+
+      .profilePictureFrame {
+        width: 25rem;
+        height: 24.5rem;
+        border: 3px solid var(--color);
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+        margin: 0%;
+        border-right: 3px solid var(--color);
+      }
+
+      .profilePictureImageContainer {
+        width: 25.5rem;
+        height: 24rem;
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+
+      }
+
+      //Description
+      .description {
+        width: 90%;
+      }
+
+      .profile {
+        flex-direction: row;
+      }
+
+      .profilePictureContainer {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .descriptionContainer {
+        justify-content: center;
+      }
+
+      .helloWord {
+        font-size: 2rem;
+      }
+
+      .thereWord {
+        font-size: 2.5rem;
+      }
+
+      .descriptionSentence {
+        font-size: 1.5rem;
+      }
+    }
+    */
+    /*Surface Duo single display*/
+    @media only screen and (max-device-width: 768px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+
+      /*Profile Header*/
+      nav {
+        height: 4rem;
+      }
+
+      .logoSection {
+        width: 13.1rem;
+        padding-left: 0rem;
+      }
+
+      .logo {
+        font-size: 2rem;
+      }
+
+      .navigation {
+        width: unset;
+        padding: 0 1rem 0 0.5rem;
+
+      }
+
+      .navigationButton {
+        height: 1.7rem;
+      }
+
+      .topLine,
+      .bottomLine {
+        width: 2rem;
+        border: 2px solid var(--color);
+      }
+
+      .centerLine {
+        width: 1.5rem;
+        border: 2px solid var(--color);
+      }
+
+      /* Profile */
+      .profile {
+        height: calc(100vh - 7.2rem);
+      }
+
+      .profilePictureFrame {
+        width: 19rem;
+        height: 19.4rem;
+      }
+
+      .profilePictureImageContainer {
+        width: 19.5rem;
+        height: 19rem;
+        margin: -9px 0rem 0rem 0.5rem;
+      }
+
+      /* Description */
+      .description {
+        width: 100%;
+      }
+
+      .helloWord {
+        font-size: 2rem;
+      }
+
+      .thereWord {
+        font-size: 2.5rem;
+      }
+
+      .descriptionSentence {
+        font-size: 1.5rem;
+      }
+
+      /* Social Media */
+
+      .profileFooter {
+        height: 3rem;
+      }
+
+      .socialMedia {
+        padding-left: 0.3rem;
+      }
+
+      #linkedin {
+        width: 40px;
+      }
+
+      #codechef {
+        width: 19.5px;
+        height: auto;
+      }
+
+      #github {
+        width: 27px;
+      }
+
+      #discord {
+        width: 32.8px;
+      }
+    }
+
+    @media only screen and (max-device-width: 415px) and (max-device-height: 915px) {
+      .profile {
+        height: calc(100vh - 9rem);
+      }
+
+      .profileFooter {
+        height: 5rem;
+      }
+
+      .helloWord {
+        font-size: 2.5rem;
+      }
+
+      .thereWord {
+        font-size: 3rem;
+      }
+
+      .descriptionSentence {
+        font-size: 1.8rem;
+      }
+    }
+    @media only screen and (max-device-width: 375px) and (max-device-height: 812px) {
+
+      .helloWord {
+        font-size: 2rem;
+      }
+
+      .thereWord {
+        font-size: 2.5rem;
+      }
+
+      .descriptionSentence {
+        font-size: 1.5rem;
+      }
+    }
+    @media only screen and (max-device-width: 414px) and (max-device-height: 736px) {
+      .helloWord {
+        font-size: 2rem;
+      }
+
+      .thereWord {
+        font-size: 2.5rem;
+      }
+
+      .descriptionSentence {
+        font-size: 1.5rem;
+      }
+      .profilePictureFrame {
+        width: 18rem;
+        height: 18.4rem;
+      }
+
+      .profilePictureImageContainer {
+        width: 18.5rem;
+        height: 18rem;
+      }
+    }
+    @media only screen and (max-device-width: 375px) and (max-device-height: 667px) {
+      .helloWord {
+        font-size: 1.6rem;
+      }
+
+      .thereWord {
+        font-size: 2rem;
+      }
+
+      .descriptionSentence {
+        font-size: 1.2rem;
+      }
+      .profilePictureFrame {
+        width: 17rem;
+        height: 17.4rem;
+      }
+
+      .profilePictureImageContainer {
+        width: 17.5rem;
+        height: 17rem;
+      }
+    }
+
+    @media only screen and (max-device-width: 360px) and (max-device-height: 740px) {
+      .helloWord {
+        font-size: 1.6rem;
+      }
+
+      .thereWord {
+        font-size: 2rem;
+      }
+
+      .descriptionSentence {
+        font-size: 1.2rem;
+      }
+      .profilePictureFrame {
+        width: 17rem;
+        height: 17.4rem;
+      }
+
+      .profilePictureImageContainer {
+        width: 17.5rem;
+        height: 17rem;
+      }
+    }
+    @media only screen and (max-device-width: 320px) and (max-device-height: 568px) {
+      .helloWord {
+        font-size: 1.3rem;
+      }
+
+      .thereWord {
+        font-size: 1.7rem;
+      }
+
+      .descriptionSentence {
+        font-size: 1rem;
+      }
+      .profilePictureFrame {
+        width: 13rem;
+        height: 13rem;
+      }
+
+      .profilePictureImageContainer {
+        width: 13.5rem;
+        height: 13rem;
+      }
+    }
+    @media only screen and (max-device-width: 280px) and (max-device-height: 653px) {
+      .helloWord {
+        font-size: 1.6rem;
+      }
+
+      .thereWord {
+        font-size: 2rem;
+      }
+
+      .descriptionSentence {
+        font-size: 1.2rem;
+      }
+      .profilePictureFrame {
+        width: 14rem;
+        height: 14rem;
+      }
+
+      .profilePictureImageContainer {
+        width: 14.5rem;
+        height: 14rem;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <!-- <section class="progressWrapper">
+   <section class="progressWrapper">
     <progress value="10" max="100"></progress>
-  </section> -->
+  </section> 
   <header>
     <nav class="profileHeader">
       <section class="logoSection">
@@ -307,12 +934,13 @@
         <span class="menu">Projects</span>
         <span class="menu">Resume</span>
         <span class="menu">Get in touch</span>
+        <span class="navigationButton">
+          <div class="topLine"></div>
+          <div class="centerLine"></div>
+          <div class="bottomLine"></div>
+        </span>
       </section>
-      <!-- <section class="navigationButton">
-        <div class="Topline"></div>
-        <div class="Centerzyine"></div>
-        <div class="BottomLine"></div>
-      </section> -->
+
     </nav>
     <section class="profile">
       <section class="descriptionContainer">
@@ -335,7 +963,7 @@
     <section class="profileFooter">
       <div class="socialMedia">
         <div class="socialMediaLogoContainer">
-          <svg  id="linkedin" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg id="linkedin" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="10" y="10" width="48" height="47" fill="white" />
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M36.8246 30.5402V30.4408C36.8043 30.4742 36.7762 30.5075 36.7585 30.5402H36.8246Z" fill="black" />
@@ -345,7 +973,7 @@
           </svg>
         </div>
         <div class="socialMediaLogoContainer">
-          <svg  id="codechef" viewBox="0 0 29 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg id="codechef" viewBox="0 0 29 37" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M12.8798 0.00127464C11.5966 0.0490639 10.4096 0.571663 9.2569 1.05726C8.2766 1.4958 7.2602 1.85824 6.21775 2.141C5.18242 2.41232 4.09817 2.68673 3.26012 3.35578C2.89817 3.63326 2.67969 4.03253 2.39762 4.37631C1.89381 5.12552 1.66718 6.02119 1.6525 6.90143C1.7112 7.8418 2.00468 8.75134 2.26555 9.65472C2.86556 11.6002 3.58132 13.5133 4.2172 15.4496C4.81394 17.2393 5.3634 19.063 6.32699 20.7156C6.64819 21.323 6.89765 21.9612 7.19928 22.5748C7.2433 22.6781 7.28407 22.8184 7.43081 22.8045C7.65255 22.786 7.827 22.6272 8.03081 22.5517C9.38082 21.9134 10.8678 21.562 12.3596 21.397C13.514 21.2829 14.6912 21.2768 15.8341 21.4803C17.008 21.7315 18.1445 22.137 19.245 22.5964C19.832 22.8615 20.4173 23.1328 21.0189 23.3641C21.0972 23.4257 21.2391 23.4535 21.2798 23.3394C21.6369 22.8353 22.0445 22.3605 22.3673 21.8348C23.1744 20.1992 23.2184 18.3215 24.0597 16.6998C24.6434 15.5883 25.5141 14.6387 26.1239 13.5426C26.4092 13.1325 26.8266 12.8227 27.0826 12.391C27.7951 11.3597 28.3543 10.2359 28.7945 9.07662C28.9608 8.62493 29.075 8.13317 28.9413 7.6599C28.8435 7.19896 28.6119 6.78119 28.4228 6.35263C28.3245 5.99454 28.1719 5.65182 27.9695 5.33518C27.3059 4.29306 26.225 3.56389 25.1277 2.9673C23.4238 2.05776 21.5472 1.47349 19.664 0.994059C17.6662 0.492586 15.6239 0.165426 13.5629 0.0166905C13.335 0.00249212 13.1065 -0.00265105 12.8781 0.00127464H12.8798ZM11.4303 0.935479C11.0047 1.27925 10.8384 1.81264 10.6672 2.2967C10.3933 3.17233 10.2384 4.08957 10.3297 5.00374C10.4341 6.64091 10.6509 8.27191 10.8678 9.89829C11.1613 11.9825 11.4988 14.0606 11.9716 16.1171C12.014 16.3714 12.0759 16.652 12.0531 16.9033C11.8656 16.6335 11.7564 16.3128 11.6325 16.0092C11.2249 14.8298 10.9281 13.6212 10.6477 12.4111C10.1461 10.2208 9.83956 7.9947 9.73137 5.75603C9.6906 4.45647 9.72484 3.09525 10.3346 1.90051C10.527 1.55211 10.7569 1.19138 11.1172 0.980185C11.2261 0.924454 11.3491 0.898308 11.4727 0.904647L11.4303 0.935479ZM5.55742 2.72989C5.76612 2.72989 5.78405 2.975 5.83134 3.11837C6.26504 4.34856 6.51939 5.62808 6.93841 6.86135C7.22211 7.86185 7.32646 8.90088 7.44059 9.93066C7.59874 11.5324 7.61668 13.1449 7.84168 14.7404C7.88407 15.0472 7.97537 15.3463 8.0357 15.65C8.05201 15.7532 7.9395 15.7255 7.90037 15.6715C7.65907 15.4233 7.602 15.0688 7.49928 14.7589C7.23841 13.7646 7.10472 12.7471 6.95472 11.7343C6.67102 9.70559 6.48678 7.66452 6.09221 5.65275C5.8346 4.70929 5.51177 3.77971 5.3422 2.8193C5.35199 2.74068 5.49384 2.74531 5.55742 2.72989ZM2.41555 5.56179C2.78893 5.64812 3.01067 5.97494 3.25034 6.23084C3.90252 7.05559 4.13078 8.08692 4.3835 9.07199C4.84492 11.0221 5.11068 13.0077 5.56557 14.9609C5.77916 15.9876 6.0433 17.005 6.39221 17.9993C6.41504 18.078 6.44928 18.2044 6.45417 18.2614C6.07427 17.5985 5.8134 16.8802 5.53297 16.1756C4.55796 13.558 4.19111 10.7862 3.41339 8.11621C3.19654 7.37933 2.91121 6.6517 2.44164 6.02273C2.36501 5.88707 2.3112 5.70824 2.38131 5.56488C2.3911 5.55871 2.40414 5.56025 2.41392 5.56179H2.41555ZM23.0342 25.9046C22.8124 25.9154 22.5287 26.0742 22.5842 26.3162C22.7374 26.6523 23.1287 26.791 23.4418 26.9575C24.1608 27.2905 24.9711 27.4046 25.6559 27.7992C25.8059 27.8917 25.8989 28.1029 25.7603 28.2417C25.4668 28.6517 24.994 28.92 24.5815 29.219C23.9749 29.6291 23.3146 30.0053 22.8581 30.5741C22.7505 30.7391 22.7912 30.9857 22.9918 31.0674C23.1695 31.1892 23.388 31.0952 23.5429 30.9888C24.3874 30.5356 25.1652 29.9806 25.9527 29.4441C26.4744 29.0757 27.0027 28.7088 27.4625 28.2725C27.6011 28.0644 27.4135 27.8501 27.2701 27.7006C26.825 27.2612 26.2592 26.9498 25.6967 26.6677C24.9511 26.2979 24.1491 26.0404 23.3195 25.9046C23.2245 25.8983 23.1292 25.8983 23.0342 25.9046ZM4.65089 25.9462C3.79165 26.1528 3.02534 26.5937 2.24762 26.9837C1.55468 27.3583 0.855217 27.7484 0.28293 28.2802C0.0911164 28.4878 -0.00924522 28.7571 0.00249339 29.0325C0.108472 29.199 0.328583 29.2483 0.493258 29.3501C1.8824 30.0315 3.32208 30.6173 4.78133 31.1507C4.99655 31.2154 5.2134 31.3249 5.44329 31.3156C5.7009 31.2848 5.9471 31.0011 5.79058 30.7668C5.55253 30.3922 5.10579 30.2103 4.73079 29.9868C3.83893 29.5197 2.84925 29.1975 2.06338 28.5716C1.98838 28.4313 2.21664 28.3743 2.2949 28.2941C3.19002 27.6852 4.29872 27.3799 5.08785 26.6338C5.23296 26.495 5.35525 26.2345 5.16612 26.0819C5.0259 25.9694 4.83024 25.9478 4.65089 25.9462ZM17.882 27.1687C17.1809 27.2103 16.5205 27.8332 16.62 28.5192C16.6722 28.9184 16.7651 29.3285 16.9917 29.6738C17.1874 29.9513 17.5298 30.1147 17.882 30.1162C18.3271 30.164 18.8439 30.0253 19.0657 29.626C19.289 29.2607 19.4113 28.8336 19.3999 28.4128C19.338 27.7037 18.6401 27.1101 17.8836 27.1687H17.882ZM10.5613 27.1841C9.80473 27.2273 9.24549 27.9626 9.30582 28.6533C9.32375 29.3377 9.81941 30.0438 10.5531 30.1856C11.127 30.2781 11.7107 29.8927 11.8624 29.3686C12.0662 28.829 12.0776 28.1954 11.7906 27.6805C11.5346 27.2951 11.0113 27.1764 10.5613 27.1841ZM10.7439 28.1908C11.1368 28.2895 11.2232 28.9153 10.8172 29.051C10.5873 29.1034 10.4276 28.866 10.4357 28.6749C10.4227 28.4791 10.5172 28.2324 10.7439 28.1908ZM17.9782 28.4112C18.1363 28.4112 18.3466 28.5207 18.2879 28.6995C18.2667 28.9631 17.9374 29.2129 17.6733 29.0479C17.458 28.94 17.3928 28.5916 17.6407 28.4806C17.745 28.4305 17.8612 28.4066 17.9782 28.4112ZM12.2423 33.0006C11.3406 33.0792 10.5401 33.517 9.7281 33.8623C9.23245 34.1028 8.64875 34.3433 8.08951 34.1506C7.47483 33.9656 6.93678 33.611 6.36286 33.349C6.24058 33.3289 6.26341 33.4677 6.28623 33.537C6.4183 34.3541 6.49656 35.2359 7.02645 35.9265C7.57755 36.6002 8.49712 36.8792 9.36288 36.9547C10.6624 37.0657 12.0401 36.7728 13.0656 35.9851C13.5694 35.5812 13.9966 35.0123 14.0194 34.368C14.0097 33.8685 13.6216 33.4492 13.1651 33.2364C12.8862 33.0792 12.5669 32.9976 12.2423 33.0006ZM16.4488 33.0129C15.8031 33.0931 15.12 33.4168 14.864 34.0149C14.6537 34.5668 14.9194 35.168 15.3075 35.5874C16.0021 36.372 17.0521 36.8098 18.1086 36.9501C19.0494 37.0704 20.0423 36.9717 20.9032 36.5801C21.6173 36.2333 22.1537 35.5704 22.2891 34.8196C22.3934 34.371 22.4211 33.9101 22.4912 33.4569C22.3836 33.3366 22.2499 33.5155 22.1358 33.537C21.5863 33.7559 21.0809 34.1028 20.489 34.2076C19.8972 34.2446 19.3689 33.9425 18.8341 33.7559C18.1331 33.4815 17.4466 33.1347 16.6901 33.0191C16.6104 33.0124 16.5288 33.0104 16.4488 33.0129ZM11.7515 25.1647C11.6374 25.1647 11.5183 25.1862 11.3993 25.2109C11.1462 25.2698 10.8987 25.3482 10.6591 25.4452C10.4145 25.5393 10.183 25.641 9.9955 25.7227C9.8785 25.7732 9.75997 25.8205 9.64006 25.8645C9.53772 25.8798 9.43295 25.8613 9.34332 25.8121C9.24223 25.7551 9.14766 25.6564 9.11343 25.419L8.67321 25.4776C8.72375 25.8137 8.90147 26.048 9.11343 26.1713C9.32538 26.2931 9.55038 26.3101 9.72973 26.2746C9.86832 26.2469 9.99061 26.1852 10.1797 26.1035C10.3689 26.0218 10.5955 25.9216 10.827 25.8322C11.0602 25.7428 11.2966 25.6626 11.4955 25.6194C11.6292 25.583 11.7703 25.5782 11.9064 25.6056C12.1346 25.698 12.2162 25.806 12.2569 25.8815C12.2977 25.9586 12.3058 25.9848 12.3058 25.9848L12.7346 25.8923C12.7346 25.8923 12.7379 25.8553 12.6531 25.695C12.5279 25.4785 12.3258 25.3108 12.0825 25.2217C11.9773 25.1801 11.8654 25.1606 11.7515 25.1647ZM16.2254 31.2339C16.1935 31.2347 16.1621 31.2419 16.1334 31.2552C16.1047 31.2685 16.0793 31.2876 16.0591 31.311C16.0591 31.311 15.8602 31.5391 15.5928 31.7657C15.3238 31.9939 14.9732 32.1974 14.789 32.202C14.6064 32.2066 14.277 32.0201 14.0227 31.8012C13.77 31.5854 13.5874 31.3634 13.5874 31.3634C13.5703 31.3397 13.5482 31.3196 13.5226 31.3043C13.497 31.289 13.4683 31.2789 13.4384 31.2745C13.4084 31.27 13.3778 31.2715 13.3485 31.2787C13.3192 31.2859 13.2917 31.2987 13.2678 31.3163C13.2439 31.334 13.2241 31.356 13.2096 31.3812C13.1951 31.4063 13.1862 31.434 13.1834 31.4626C13.1807 31.4911 13.1841 31.5199 13.1936 31.5471C13.2031 31.5743 13.2183 31.5994 13.2385 31.6208C13.2385 31.6208 13.4406 31.8675 13.726 32.1126C14.0113 32.3593 14.3732 32.6321 14.8021 32.6213C15.2243 32.609 15.5912 32.3284 15.8879 32.0787C16.1847 31.8274 16.4015 31.5777 16.4015 31.5777C16.4288 31.5467 16.4461 31.509 16.4512 31.469C16.4564 31.4289 16.4493 31.3884 16.4307 31.3521C16.4121 31.3158 16.3829 31.2854 16.3465 31.2644C16.3101 31.2435 16.268 31.2329 16.2254 31.2339ZM12.8798 0.00281623C11.5966 0.0490639 10.4096 0.570122 9.2569 1.05726C8.2766 1.4958 7.2602 1.85824 6.21775 2.141C5.18242 2.41232 4.09817 2.68673 3.26012 3.35578C2.89817 3.63326 2.67969 4.03253 2.39762 4.37631C1.89381 5.12552 1.66718 6.02119 1.6525 6.90143C1.7112 7.8418 2.00468 8.75134 2.26555 9.65472C2.86556 11.6017 3.58132 13.5133 4.2172 15.4496C4.81394 17.2393 5.3634 19.063 6.32699 20.7156C6.64819 21.323 6.89765 21.9612 7.19928 22.5748C7.2433 22.6781 7.28407 22.8184 7.43081 22.806C7.65255 22.786 7.827 22.6272 8.03081 22.5517C9.38082 21.9134 10.8678 21.5635 12.3596 21.397C13.514 21.2829 14.6912 21.2768 15.8341 21.4818C17.008 21.7331 18.1445 22.137 19.245 22.5964C19.832 22.8615 20.4173 23.1328 21.0189 23.3641C21.0972 23.4257 21.2391 23.4535 21.2798 23.3394C21.6369 22.8353 22.0445 22.3605 22.3673 21.8348C23.1744 20.1977 23.2184 18.3215 24.0597 16.6998C24.6434 15.5883 25.5141 14.6387 26.1239 13.5426C26.4092 13.1325 26.8266 12.8227 27.0826 12.3926C27.7951 11.3597 28.3543 10.2344 28.7945 9.07662C28.9608 8.62493 29.075 8.13317 28.9413 7.6599C28.8435 7.19896 28.6119 6.78119 28.4228 6.35263C28.3245 5.99454 28.1719 5.65182 27.9695 5.33518C27.3059 4.29306 26.225 3.56389 25.1277 2.9673C23.4238 2.05622 21.5472 1.47349 19.664 0.994059C17.6662 0.492586 15.6239 0.165426 13.5629 0.0166905C13.335 0.00249212 13.1065 -0.00265105 12.8781 0.00127464L12.8798 0.00281623ZM11.4303 0.935479C11.0047 1.27771 10.8384 1.81264 10.6672 2.29824C10.3933 3.17233 10.2384 4.09111 10.3297 5.00374C10.4341 6.64091 10.6509 8.27191 10.8678 9.89829C11.1613 11.9825 11.4988 14.0621 11.9716 16.1171C12.014 16.3714 12.0759 16.652 12.0531 16.9033C11.8656 16.6335 11.7564 16.3128 11.6325 16.0092C11.2249 14.8298 10.9281 13.6212 10.6477 12.4111C10.1461 10.2208 9.83956 7.9947 9.73137 5.75603C9.6906 4.45647 9.72484 3.09525 10.3346 1.90051C10.527 1.55366 10.7569 1.19138 11.1172 0.980185C11.2261 0.924454 11.3491 0.898308 11.4727 0.904647L11.4303 0.935479ZM5.55742 2.72989C5.76612 2.72989 5.78405 2.97654 5.83134 3.11837C6.26504 4.34856 6.51939 5.62808 6.93841 6.8629C7.22211 7.86185 7.32646 8.90088 7.44059 9.93066C7.59874 11.5324 7.61668 13.1449 7.84168 14.7404C7.88407 15.0472 7.97537 15.3478 8.0357 15.65C8.05201 15.7548 7.9395 15.727 7.90037 15.6715C7.65907 15.4249 7.602 15.0703 7.49928 14.7589C7.23841 13.7646 7.10472 12.7471 6.95472 11.7343C6.67102 9.70559 6.48678 7.66452 6.09221 5.65275C5.8346 4.70929 5.51177 3.77971 5.3422 2.8193C5.35199 2.74068 5.49384 2.74531 5.55742 2.72989ZM2.41555 5.56179C2.78893 5.64658 3.01067 5.97494 3.25034 6.23084C3.90252 7.05559 4.13078 8.08692 4.3835 9.07199C4.84492 11.0221 5.11068 13.0077 5.56557 14.9609C5.77916 15.9876 6.0433 17.005 6.39221 17.9993C6.41504 18.078 6.44928 18.2044 6.45417 18.2614C6.07427 17.5985 5.8134 16.8802 5.53297 16.1772C4.55796 13.5565 4.19111 10.7878 3.41339 8.11621C3.19654 7.37933 2.91121 6.6517 2.44164 6.02273C2.36501 5.88861 2.3112 5.7067 2.38131 5.56488C2.3911 5.55871 2.40414 5.56025 2.41392 5.56179H2.41555ZM23.0342 25.9046C22.8124 25.9154 22.5287 26.0727 22.5842 26.3162C22.7374 26.6508 23.1287 26.7895 23.4418 26.9575C24.1608 27.289 24.9711 27.4046 25.6559 27.7992C25.8059 27.8917 25.8989 28.1029 25.7603 28.2417C25.4668 28.6517 24.994 28.92 24.5815 29.219C23.9749 29.6291 23.3146 30.0053 22.8581 30.5741C22.7505 30.7391 22.7912 30.9857 22.9918 31.0674C23.1695 31.1892 23.388 31.0952 23.5429 30.9888C24.3874 30.5356 25.1652 29.9806 25.9527 29.4441C26.4744 29.0741 27.0027 28.7088 27.4625 28.2725C27.6011 28.0644 27.4135 27.8486 27.2701 27.7006C26.825 27.2597 26.2592 26.9514 25.6967 26.6677C24.951 26.2989 24.1489 26.041 23.3195 25.9062C23.2245 25.8994 23.1292 25.8988 23.0342 25.9046ZM4.64926 25.9493C3.79002 26.1544 3.02371 26.5968 2.24599 26.9853C1.55305 27.3599 0.853586 27.7514 0.2813 28.2833C0.0898803 28.4905 -0.0104543 28.7591 0.000863065 29.0341C0.106842 29.2021 0.326952 29.2499 0.491627 29.3516C1.88077 30.033 3.32045 30.6203 4.7797 31.1522C4.99492 31.2169 5.21177 31.3264 5.44166 31.3187C5.69927 31.2879 5.94547 31.0027 5.78895 30.7683C5.5509 30.3937 5.10416 30.2118 4.72916 29.9883C3.8373 29.5212 2.84762 29.199 2.06175 28.5731C1.98675 28.4344 2.21501 28.3758 2.29327 28.2956C3.18838 27.6882 4.29709 27.383 5.08622 26.6353C5.23133 26.4966 5.35362 26.2376 5.16449 26.085C5.02427 25.9709 4.82861 25.9493 4.64926 25.9493ZM17.8803 27.1703C17.1792 27.2134 16.5189 27.8362 16.6184 28.5207C16.6705 28.9215 16.7635 29.3316 16.9901 29.6769C17.1858 29.9528 17.5282 30.1162 17.8803 30.1193C18.3254 30.1656 18.8423 30.0268 19.064 29.6276C19.2907 29.2597 19.4063 28.84 19.3983 28.4143C19.3363 27.7052 18.6369 27.1132 17.8803 27.1703ZM10.5596 27.1857C9.8031 27.2288 9.24386 27.9642 9.30419 28.6548C9.32212 29.3393 9.81778 30.0453 10.5515 30.1887C11.1254 30.2797 11.7091 29.8958 11.8607 29.3717C12.0645 28.8321 12.0759 28.197 11.789 27.6821C11.533 27.2982 11.0096 27.178 10.5596 27.1857ZM10.7422 28.1939C11.1352 28.291 11.2216 28.9184 10.8156 29.0525C10.5857 29.105 10.4259 28.8676 10.4341 28.6764C10.421 28.4806 10.5156 28.234 10.7422 28.1939ZM17.9765 28.4128C18.1347 28.4128 18.345 28.5238 18.2863 28.7011C18.2651 28.9662 17.9358 29.2144 17.6716 29.051C17.4564 28.9416 17.3912 28.5932 17.639 28.4822C17.7434 28.432 17.8596 28.4081 17.9765 28.4128ZM12.2406 33.0021C11.339 33.0823 10.5384 33.5201 9.72647 33.8654C9.23082 34.1043 8.64712 34.3448 8.08787 34.1521C7.4732 33.9687 6.93515 33.6126 6.36123 33.3505C6.23895 33.332 6.26178 33.4707 6.2846 33.5386C6.41667 34.3556 6.49493 35.2374 7.02482 35.928C7.57592 36.6033 8.49549 36.8823 9.36125 36.9563C10.6607 37.0673 12.0384 36.7744 13.064 35.9866C13.5678 35.5827 13.995 35.0154 14.0178 34.3695C14.008 33.87 13.62 33.4507 13.1635 33.238C12.8846 33.0808 12.5653 32.9992 12.2406 33.0021ZM16.4472 33.0144C15.8015 33.0946 15.1184 33.4183 14.8624 34.0165C14.652 34.5699 14.9178 35.1696 15.3059 35.5904C16.0004 36.3736 17.0504 36.8114 18.107 36.9517C19.0477 37.0719 20.0407 36.9748 20.9016 36.5817C21.6157 36.2348 22.1521 35.5719 22.2874 34.8212C22.3918 34.3741 22.4195 33.9116 22.4896 33.4584C22.382 33.3397 22.2483 33.5185 22.1342 33.5386C21.5847 33.759 21.0793 34.1043 20.4874 34.2107C19.8956 34.2477 19.3673 33.9456 18.8325 33.7575C18.1314 33.4831 17.445 33.1378 16.6885 33.0221C16.6088 33.0155 16.5288 33.0134 16.4488 33.016L16.4472 33.0144Z"
               fill="white" />
@@ -360,7 +988,7 @@
           </svg>
         </div>
         <div class="socialMediaLogoContainer">
-          <svg  id="discord" viewBox="0 0 49 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg id="discord" viewBox="0 0 49 38" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M41.4723 3.10754C38.2557 1.6349 34.86 0.590155 31.3719 0C30.8946 0.853277 30.4627 1.73118 30.078 2.63005C26.3625 2.07016 22.5841 2.07016 18.8685 2.63005C18.4837 1.73128 18.0518 0.85338 17.5747 0C14.0843 0.595138 10.6864 1.64236 7.46653 3.11524C1.07432 12.5726 -0.658512 21.7951 0.207903 30.8867C3.95134 33.6525 8.14132 35.756 12.5957 37.1056C13.5987 35.7566 14.4862 34.3255 15.2489 32.8275C13.8003 32.2865 12.4023 31.619 11.0708 30.8328C11.4212 30.5787 11.7639 30.3168 12.0951 30.0627C15.9693 31.8846 20.1978 32.8293 24.4791 32.8293C28.7603 32.8293 32.9888 31.8846 36.863 30.0627C37.198 30.3361 37.5407 30.5979 37.8873 30.8328C36.5533 31.6203 35.1526 32.289 33.7016 32.8313C34.4633 34.3287 35.3508 35.7586 36.3547 37.1056C40.8129 35.7614 45.0061 33.6589 48.7502 30.8906C49.7668 20.3473 47.0135 11.2095 41.4723 3.10754ZM16.3463 25.2955C13.9319 25.2955 11.9372 23.1044 11.9372 20.4089C11.9372 17.7134 13.8626 15.503 16.3386 15.503C18.8146 15.503 20.7939 17.7134 20.7516 20.4089C20.7092 23.1044 18.8069 25.2955 16.3463 25.2955ZM32.6118 25.2955C30.1935 25.2955 28.2066 23.1044 28.2066 20.4089C28.2066 17.7134 30.1319 15.503 32.6118 15.503C35.0917 15.503 37.0555 17.7134 37.0132 20.4089C36.9708 23.1044 35.0724 25.2955 32.6118 25.2955Z"
               fill="white" />
@@ -371,7 +999,7 @@
       </div>
     </section>
   </header>
-  <!-- <script>
+  <script>
     let loader = document.querySelector('.progressWrapper');
     let i = 10;
     let interval = setInterval(() => {
@@ -409,7 +1037,7 @@
         }
       }
     }, 10)
-  </script> -->
+  </script> 
 </body>
 
 </html>
