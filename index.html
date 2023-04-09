@@ -154,6 +154,7 @@
     .profilePictureContainer {
       justify-content: center;
       align-items: center;
+      padding-right: 2rem;
     }
 
     .description {
@@ -172,30 +173,9 @@
       font-size: 2rem;
     }
 
-    .profilePictureFrame {
-      width: 34.5rem;
-      height: 31.8rem;
-      border: 3px solid var(--color);
-      border-bottom-left-radius: 50%;
-      border-top-left-radius: 50%;
-      margin-top: 24px;
-
-    }
-
-    .profilePictureImageContainer {
-      width: 32.5rem;
-      height: 31rem;
-      border-bottom-left-radius: 50%;
-      border-top-left-radius: 50%;
-      margin: -9px 0rem 0rem 1.1rem;
-    }
-
-    .profilePicture {
-      width: 100%;
-      height: 100%;
-      border-bottom-left-radius: 50%;
-      border-top-left-radius: 50%;
-    }
+    .profilePicture{
+        width: 38.875rem;
+      }
 
     .profileFooter {
       height: 6rem;
@@ -273,28 +253,12 @@
     }
 
     @media screen and (max-width:1250px)and (max-height: 900px) {
-
-      /*
-  * Profile size reduced
+       /*
+  * profile size reduced
   */
-      .profilePictureFrame {
-        width: 30.5rem;
-        height: 27.8rem;
-        border: 3px solid var(--color);
-        border-bottom-left-radius: 50%;
-        border-top-left-radius: 50%;
-        margin: 24px 0px 0px 0px;
-
+      .profilePicture{
+        width: 37.875rem;
       }
-
-      .profilePictureImageContainer {
-        width: 28.5rem;
-        height: 27rem;
-        border-bottom-left-radius: 50%;
-        border-top-left-radius: 50%;
-        margin: -9px 0rem 0rem 1.1rem;
-      }
-
       /*
   * description size reduced
   */
@@ -312,7 +276,12 @@
     }
 
     @media screen and (max-width:1050px) {
-
+             /*
+  * profile size reduced
+  */
+      .profilePicture {
+    width: 33.875rem;
+}
       /* Reducing the outer space  */
       .logoSection {
         width: 13rem;
@@ -339,7 +308,7 @@
 
 
     /*Ipad pro or portrait display*/
-    @media only screen and (max-device-width: 1314px) and (max-device-height: 1455px) and (-webkit-min-device-pixel-ratio: 2) {
+    @media only screen and (max-device-width: 1024px) and (max-device-height: 1455px) and (-webkit-min-device-pixel-ratio: 2) {
 
       /*Header*/
       nav {
@@ -398,24 +367,6 @@
         align-items: flex-end;
         justify-content: flex-end;
         overflow: hidden;
-      }
-
-      .profilePictureFrame {
-        width: 39rem;
-        height: 37.5rem;
-        border: 3px solid var(--color);
-        border-bottom-left-radius: 50%;
-        border-top-left-radius: 50%;
-        margin: 0%;
-        border-right: unset;
-      }
-
-      .profilePictureImageContainer {
-        width: 39.5rem;
-        height: 37rem;
-        border-bottom-left-radius: 50%;
-        border-top-left-radius: 50%;
-
       }
 
       /*Social Media*/
@@ -509,23 +460,6 @@
 
       /*Profile Picture*/
 
-      .profilePictureFrame {
-        width: 29rem;
-        height: 28.5rem;
-        border: 3px solid var(--color);
-        border-bottom-left-radius: 50%;
-        border-top-left-radius: 50%;
-        margin: 0%;
-        border-right: unset;
-      }
-
-      .profilePictureImageContainer {
-        width: 29.5rem;
-        height: 28rem;
-        border-bottom-left-radius: 50%;
-        border-top-left-radius: 50%;
-
-      }
 
       /*Social Media*/
       .profileFooter {
@@ -621,25 +555,7 @@
         height: calc(100vh - 12.3rem);
       }
 
-      //Profile Picture
 
-      .profilePictureFrame {
-        width: 25rem;
-        height: 24.5rem;
-        border: 3px solid var(--color);
-        border-bottom-left-radius: 50%;
-        border-top-left-radius: 50%;
-        margin: 0%;
-        border-right: 3px solid var(--color);
-      }
-
-      .profilePictureImageContainer {
-        width: 25.5rem;
-        height: 24rem;
-        border-bottom-left-radius: 50%;
-        border-top-left-radius: 50%;
-
-      }
 
       //Description
       .description {
@@ -650,10 +566,7 @@
         flex-direction: row;
       }
 
-      .profilePictureContainer {
-        justify-content: center;
-        align-items: center;
-      }
+
 
       .descriptionContainer {
         justify-content: center;
@@ -715,16 +628,8 @@
         height: calc(100vh - 7.2rem);
       }
 
-      .profilePictureFrame {
-        width: 19rem;
-        height: 19.4rem;
-      }
 
-      .profilePictureImageContainer {
-        width: 19.5rem;
-        height: 19rem;
-        margin: -9px 0rem 0rem 0.5rem;
-      }
+
 
       /* Description */
       .description {
@@ -770,7 +675,7 @@
         width: 32.8px;
       }
     }
-
+/*Phone*/
     @media only screen and (max-device-width: 415px) and (max-device-height: 915px) {
       .profile {
         height: calc(100vh - 9rem);
@@ -790,6 +695,21 @@
 
       .descriptionSentence {
         font-size: 1.8rem;
+      }
+    }
+    @media only screen and (max-device-width: 393px) and (max-device-height: 851px) {
+
+
+      .helloWord {
+        font-size: 2.2rem;
+      }
+
+      .thereWord {
+        font-size: 2.8rem;
+      }
+
+      .descriptionSentence {
+        font-size: 1.6rem;
       }
     }
     @media only screen and (max-device-width: 375px) and (max-device-height: 812px) {
@@ -818,15 +738,7 @@
       .descriptionSentence {
         font-size: 1.5rem;
       }
-      .profilePictureFrame {
-        width: 18rem;
-        height: 18.4rem;
-      }
 
-      .profilePictureImageContainer {
-        width: 18.5rem;
-        height: 18rem;
-      }
     }
     @media only screen and (max-device-width: 375px) and (max-device-height: 667px) {
       .helloWord {
@@ -840,15 +752,7 @@
       .descriptionSentence {
         font-size: 1.2rem;
       }
-      .profilePictureFrame {
-        width: 17rem;
-        height: 17.4rem;
-      }
 
-      .profilePictureImageContainer {
-        width: 17.5rem;
-        height: 17rem;
-      }
     }
 
     @media only screen and (max-device-width: 360px) and (max-device-height: 740px) {
@@ -863,15 +767,7 @@
       .descriptionSentence {
         font-size: 1.2rem;
       }
-      .profilePictureFrame {
-        width: 17rem;
-        height: 17.4rem;
-      }
 
-      .profilePictureImageContainer {
-        width: 17.5rem;
-        height: 17rem;
-      }
     }
     @media only screen and (max-device-width: 320px) and (max-device-height: 568px) {
       .helloWord {
@@ -885,15 +781,7 @@
       .descriptionSentence {
         font-size: 1rem;
       }
-      .profilePictureFrame {
-        width: 13rem;
-        height: 13rem;
-      }
 
-      .profilePictureImageContainer {
-        width: 13.5rem;
-        height: 13rem;
-      }
     }
     @media only screen and (max-device-width: 280px) and (max-device-height: 653px) {
       .helloWord {
@@ -907,15 +795,7 @@
       .descriptionSentence {
         font-size: 1.2rem;
       }
-      .profilePictureFrame {
-        width: 14rem;
-        height: 14rem;
-      }
 
-      .profilePictureImageContainer {
-        width: 14.5rem;
-        height: 14rem;
-      }
     }
   </style>
 </head>
@@ -953,11 +833,7 @@
         </section>
       </section>
       <section class="profilePictureContainer">
-        <div class="profilePictureFrame">
-          <div class="profilePictureImageContainer">
-            <img class="profilePicture" src="./Images/profile.jpg" alt="">
-          </div>
-        </div>
+        <img class="profilePicture" src="./Images/Profile-hd.svg" alt="Profile Image">
       </section>
     </section>
     <section class="profileFooter">
