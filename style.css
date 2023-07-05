@@ -17,7 +17,17 @@ a {
   color: var(--color);
   text-decoration: none;
 }
+.logo--preloader{
+  text-decoration: none;
+  font-family: 'Pirata One', cursive;
+  color: var(--color);
+  font-size: 4rem;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
 
+}
 .progressWrapper {
   position: absolute;
   width: 100%;
@@ -35,7 +45,7 @@ progress {
   background-color: #fff;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 55%;
   transform: translate(-50%, -50%);
 }
 
@@ -511,7 +521,7 @@ footer {
   width: 95%;
   height: calc(100vh - 9rem);
   overflow: auto;
-  padding: 4.5rem;
+  padding: 2rem 4.5rem 4.5rem 4.5rem;
   box-sizing: border-box;
 
 }
@@ -521,7 +531,6 @@ footer {
   font-weight: 100;
   width: 60rem;
   height: 4rem;
-  font-family: 'Pirata One', cursive;
   display: flex;
   align-items: center;
   padding-bottom: 1rem;
@@ -587,23 +596,7 @@ footer {
 }
 
 /*---------------------------------------------certificates*/
-@keyframes certificates-frame-animation{
-  form{
-        transform: scale(3);
-  }
-  to{
-        transform: scale(1);
-  }
-}
 
-@keyframes certificate-animation{
-  form{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
-}
 .certificates--page, .contact--page{
   position: fixed;
   width: 100%;
@@ -626,33 +619,38 @@ footer {
 .certificates--container{
   width: 100%;
   height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10rem 1fr;
+  color: var(--color);
+  font-family: 'Pirata One', cursive;
+  font-size: 4rem;
+}
+
+.word--certificates-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+
+}
+.word--certificates-container p{
+  margin: 0%;
+}
+.certificate--word-decoration-left-line{
+  transform: scaleX(-1);
+}
+.certificate--image-container{
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-.certificates{
-  position: absolute;
-}
-.certificates img{
-width: 43rem;
-animation: certificate-animation;
-animation-fill-mode: forwards;
-animation-duration: 2s;
-opacity: 0;
 }
 
-.certificates-frame-animation{
-    position: absolute;
-    background-color: #000;
-    width: 20rem;
-    height: 20rem;
-    transform: scale(3.1) rotate(45deg);
-    animation-name: certificates-frame-animation;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-}
+.certificate--image{
+  width: 49rem;
+  height: 33rem;
 
+}
 /*-------------------------------------------------------Contact Me page*/
 
 .contact--grid-property-container{
@@ -667,12 +665,42 @@ opacity: 0;
 
   border: 4px solid black;
 }
-.contactme{
-  background-color: aqua;
+.contactMe--form-container{
   display: flex;
   justify-content: center;
   align-items: center;  
   color: var(--color);
+}
+
+.contactMe--form{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 25rem;
+  height: 27rem;
+  background-color: #000;
+  margin-top: 2rem;
+}
+#contactUs-email, #contactUs-password, #contactUs-message, #contactUs-submit-button{
+ height: 3rem;
+ border: 3px solid #fff;
+ border-radius: 8px;
+ background-color: var(--bgcolor);
+ color: var(--color);
+ font-size: 1.1rem;
+ font-family: 'Bree Serif', serif;
+padding-left: 10px;
+box-sizing: border-box;
+}
+#contactUs-message{
+  height: 12rem;
+  resize: none;
+}
+
+#contactUs-submit-button{
+  background-color: var(--color);
+  color: var(--bgcolor);
+  font-size: 1.5rem;
 }
 .contactlinks{
   background-color: var(--bgcolor);
@@ -683,16 +711,43 @@ opacity: 0;
   font-family: 'Pirata One', cursive;
   font-size: 7rem;
 }
+@keyframes temp{
+
+  0%{
+    transform: rotate(0deg);
+
+    border-radius: 52% 48% 55% 45% / 41% 54% 46% 59%   ;
+  }
+  25%{
+    border-radius: 47% 53% 41% 59% / 47% 39% 61% 53%       ;
+
+  }
+  50%{
+    transform: rotate(180deg);
+    border-radius: 47% 53% 38% 62% / 47% 65% 35% 53%     ;
+
+  }
+
+
+  100%{
+    transform: rotate(365deg);
+
+    border-radius: 52% 48% 55% 45% / 41% 54% 46% 59% ;
+
+  }
+}
+
 .fancy--border{
   border: 3px solid #ffffff;
-  border-radius: 54% 46% 45% 55% / 36% 25% 75% 64% ;
+  border-radius: 48% 52% 57% 43% / 39% 47% 53% 61%  ;
   position: absolute;
-  width: 30rem;
-  height: 30rem;
-}
+  width: 29rem;
+  height: 29rem;
+  animation: temp 20s  infinite;}
 .contactMe--word-style{
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 .contactMe--word-style p{
   margin: 0%;
@@ -707,4 +762,13 @@ opacity: 0;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+}
+#contactMe--cancelButton {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  cursor: pointer;
+}
+#contactMe--cancelButton img{
+width: 21PX;
 }
