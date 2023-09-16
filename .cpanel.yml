@@ -2,7 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/anandcho/public_html/
-    - /bin/cp -R images $DEPLOYPATH
-    - /bin/cp -R pages $DEPLOYPATH
+    - /bin/cp -R * $DEPLOYPATH
     - /bin/cp * $DEPLOYPATH
 
