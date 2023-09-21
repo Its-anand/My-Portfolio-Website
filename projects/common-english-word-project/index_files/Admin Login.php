@@ -108,7 +108,7 @@ session_start();
             <div class="leftDiv">
             <h2 class='heading'>Admin Login</h2>
                 <form method="post">
-                    <input type="text" placeholder="Username*" name="email_username" class="form_input" require>
+                    <input type="text" placeholder="Email *" name="username" class="form_input" require>
                     <input type="password" placeholder="Password *" name="password" class="form_input" require>
                     <input type="submit" name="Signin" value="Submit" id="submit_btn" class="form_btn">
                     <a class="form_btn" href='../index.php' id="other_btn">Go Home</a><br><br>
@@ -121,7 +121,7 @@ session_start();
 #This is the code for login
 if(isset($_POST['Signin']))
 {
-    $query = "SELECT * FROM `admin_login` WHERE  `email`= '$_POST[email_username]' AND `Admin_password`='$_POST[password]'";
+    $query = "SELECT * FROM `admin_login` WHERE  `admin_email`= '$_POST[username]'  OR `admin_name`='$_POST[username]'  AND `admin_password`='$_POST[password]'";
 
     $result = mysqli_query($con,$query);
 
@@ -145,5 +145,6 @@ if(isset($_POST['Signin']))
         }
 
 }
+
 ?>
 </html>

@@ -28,7 +28,7 @@ function generateNumericOTP($n)
 
 if(isset($_POST['buynow']))
 {
-    $query = "SELECT * FROM `registered_users` WHERE  `username`= '$user_id'";
+    $query = "SELECT * FROM `purehealth_registered_users` WHERE  `username`= '$user_id'";
     $result = mysqli_query($con,$query);
     if($result)
     {
@@ -221,7 +221,7 @@ body{margin:0; padding:0;}
 <div id="button_holder">
     <img src="../../Image/Transaction_Cancelled_image.webp" alt="Transaction_Cancelled_image"/>
      <h2 style="font-family: sans-serif;">Transaction Cancelled</h2>
-    <input type='submit' id="go_back" name="ordercancelled" value="GO BACK">
+    <input type='submit'  id="go_back" name="ordercancelled" value="GO BACK">
 </div>
 
 
@@ -233,5 +233,7 @@ body{margin:0; padding:0;}
         $('.razorpay-payment-button').click();
         document.querySelector('#go_back').addEventListener('click', function () { history.go(-2) })
     })
+
+
 </script>
 </html>

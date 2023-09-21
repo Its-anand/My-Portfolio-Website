@@ -252,7 +252,7 @@ main #flex-container
 <div id="header_holder"><div id="header">
         <div id="left_div">
             <div class="img_holder"><img src="../../Image/account_logo.png" class="header_img" alt="account_logo"></div>
-            <div><p><?php echo $_SESSION['UserLoginId']?></p></div>
+            <div><p><?php echo $_SESSION['AdminLoginId']?></p></div>
         </div>
         <div id="right_div">
      <form style="cursor: pointer;" method="post" action="../../Data/account and card/logout.php">
@@ -281,7 +281,7 @@ main #flex-container
         </tr>
         
         <?php
-    $productquery = "SELECT * FROM orders where delivery_status = 'Delivered'  AND refund = 'Pending'";
+    $productquery = "SELECT * FROM purehealth_orders where delivery_status = 'Delivered'  AND refund = 'Pending'";
     $productresult = mysqli_query($con,$productquery);
 if($productresult)
 {

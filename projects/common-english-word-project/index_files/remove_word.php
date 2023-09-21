@@ -8,14 +8,13 @@ if(!isset($_SESSION['logged_in']))
 if(isset($_POST['Del_word']))
 {
 $word_id = $_POST['rmv_word_id'];
-echo $word_id;
-$query = "SELECT * FROM products where id = '$word_id'";
+$query = "SELECT * FROM cew_words where id = '$word_id'";
 $result = mysqli_query($con,$query);
     if($result)
     {
         if(mysqli_num_rows($result)==1)
         {
-            $deletequery = "DELETE FROM `products` WHERE id = '$word_id'";
+            $deletequery = "DELETE FROM `cew_words` WHERE id = '$word_id'";
             $query = mysqli_query($con, $deletequery);
             echo"
             <script>

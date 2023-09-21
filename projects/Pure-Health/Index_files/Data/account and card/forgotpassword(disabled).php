@@ -44,7 +44,7 @@
    if(isset($_POST['send-reset-link']))
    {
         $user_email = $_POST['email'];
-       $query="SELECT * FROM `registered_users` WHERE `email` = '$user_email'";
+       $query="SELECT * FROM `purehealth_registered_users` WHERE `email` = '$user_email'";
        $result=mysqli_query($con,$query);
        if($result)
        {
@@ -54,7 +54,7 @@
                $reset_token=bin2hex(random_bytes(16));
                date_default_timezone_set('Asia/kolkata');
                $date=date("Y-m-d");
-               $query="UPDATE `registered_users` SET `resettoken` = '$reset_token' , `resettokenexpire`='$date' WHERE `email` = '$user_email'";
+               $query="UPDATE `purehealth_registered_users` SET `resettoken` = '$reset_token' , `resettokenexpire`='$date' WHERE `email` = '$user_email'";
                if(mysqli_query($con, $query) && sendMail($user_email, $reset_token))
                {
                 echo"

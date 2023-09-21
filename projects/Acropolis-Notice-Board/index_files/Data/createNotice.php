@@ -23,7 +23,7 @@ if(isset($_POST['notice_submit']))
     $notice_writer_role=$_POST['notice_writer_role'];
     $notice_writer_name=$_POST['notice_writer_name'];
 
-    $query="INSERT INTO `notice`(`notice_date`, `notice_title`, `notice_body`, `notice_writer_role`, `notice_writer_name`) VALUES ('$notice_date','$notice_title','$notice_body','$notice_writer_role','$notice_writer_name')";
+    $query="INSERT INTO `acroboard_notice`(`notice_date`, `notice_title`, `notice_body`, `notice_writer_role`, `notice_writer_name`) VALUES ('$notice_date','$notice_title','$notice_body','$notice_writer_role','$notice_writer_name')";
     $result = mysqli_query($con,$query);
     if($result)
     {

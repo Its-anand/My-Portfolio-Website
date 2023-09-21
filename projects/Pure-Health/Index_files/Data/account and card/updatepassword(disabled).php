@@ -141,7 +141,7 @@
     {
         date_default_timezone_set('Asia/kolkata');
         $date=date("Y-m-d");
-        $query="SELECT * FROM `registered_users` WHERE `email` ='$_GET[email]' AND `resettoken`='$_GET[reset_token]' AND `resettokenexpire`='$date'";
+        $query="SELECT * FROM `purehealth_registered_users` WHERE `email` ='$_GET[email]' AND `resettoken`='$_GET[reset_token]' AND `resettokenexpire`='$date'";
         $result=mysqli_query($con,$query);
         if($result)
         {
@@ -189,7 +189,7 @@
     if(isset($_POST['updatepassword']))
     {
         $pass=password_hash($_POST['Password'],PASSWORD_BCRYPT);
-        $update ="UPDATE `registered_users` SET `password`='$pass',`resettoken`= NULL,`resettokenexpire`= NULL WHERE `email`='$_POST[email]'";
+        $update ="UPDATE `purehealth_registered_users` SET `password`='$pass',`resettoken`= NULL,`resettokenexpire`= NULL WHERE `email`='$_POST[email]'";
         if(mysqli_query($con,$update))
         {
             echo"

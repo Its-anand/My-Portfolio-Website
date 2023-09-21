@@ -25,7 +25,7 @@ if(isset($_POST['submit']))
     #Image uploading code ended    
     }
     
-    // $Checkquery = "SELECT * FROM `political parties` WHERE  `party_name`= '$party_name'";
+    // $Checkquery = "SELECT * FROM `voting_sys_political parties` WHERE  `party_name`= '$party_name'";
     // $result = mysqli_query($con, $Checkquery);
     //     if(mysqli_num_rows($result)==1)
     //     {
@@ -37,7 +37,7 @@ if(isset($_POST['submit']))
     //         ";
     //     }
     //     else if(mysqli_num_rows($result)==0){
-    //         $query="INSERT INTO ` political parties`(`party_logo`, `party_name`, `candidate_name`) VALUES ('$party_logo','$party_name','$candidate_name')";
+    //         $query="INSERT INTO ` voting_sys_political parties`(`party_logo`, `party_name`, `candidate_name`) VALUES ('$party_logo','$party_name','$candidate_name')";
     //         $result = mysqli_query($con,$query);
     //         if($result)
     //         {
@@ -58,7 +58,7 @@ if(isset($_POST['submit']))
     //            ";
     //        }
     //     }            
-        $query="INSERT INTO ` political_parties`(`party_logo`, `party_name`, `candidate_name`) VALUES ('$party_logo','$party_name','$candidate_name')";
+        $query="INSERT INTO ` voting_sys_political_parties`(`party_logo`, `party_name`, `candidate_name`) VALUES ('$party_logo','$party_name','$candidate_name')";
         $result = mysqli_query($con,$query);
         if($result)
         {

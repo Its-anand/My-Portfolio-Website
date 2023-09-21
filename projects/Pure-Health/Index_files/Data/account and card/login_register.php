@@ -48,7 +48,7 @@ function sendMail($email,$v_code)
 #This is the code for login
 if(isset($_POST['login']))
 {
-    $query = "SELECT * FROM `registered_users` WHERE  `email`= '$_POST[email_username]' OR `username`='$_POST[email_username]'";
+    $query = "SELECT * FROM `purehealth_registered_users` WHERE  `email`= '$_POST[email_username]' OR `username`='$_POST[email_username]'";
     $result = mysqli_query($con,$query);
     
     if($result)
@@ -113,7 +113,7 @@ if(isset($_POST['login']))
 #This is the code for registration 
 if(isset($_POST['register']))
 {
-    $user_exist_query="SELECT * FROM `registered_users` where `username`= '$_POST[username]' OR `email` ='$_POST[email]'";
+    $user_exist_query="SELECT * FROM `purehealth_registered_users` where `username`= '$_POST[username]' OR `email` ='$_POST[email]'";
     $result=mysqli_query($con,$user_exist_query);
     if($result)
     {
@@ -144,7 +144,7 @@ if(isset($_POST['register']))
         {
           $password=password_hash($_POST['password'],PASSWORD_BCRYPT); 
         //  $v_code= bin2hex(random_bytes(16));  
-         $query="INSERT INTO `registered_users`(`full_name`, `username`, `number`, `email`, `password`, `address`, `pincode`, /*`verification_code`,*/ `is_verified`) VALUES ('$_POST[fullname]','$_POST[username]','$_POST[number]','$_POST[email]','$password','$_POST[address]','$_POST[pincode]',/*'$v_code',*/'1')";
+         $query="INSERT INTO `purehealth_registered_users`(`full_name`, `username`, `number`, `email`, `password`, `address`, `pincode`, /*`verification_code`,*/ `is_verified`) VALUES ('$_POST[fullname]','$_POST[username]','$_POST[number]','$_POST[email]','$password','$_POST[address]','$_POST[pincode]',/*'$v_code',*/'1')";
          if(mysqli_query($con,$query) /*php mailer code was here*/) // this code -> && sendMail($_POST['email'],$v_code)
          {
             echo"

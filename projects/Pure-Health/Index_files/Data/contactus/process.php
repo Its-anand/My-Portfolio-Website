@@ -11,8 +11,11 @@ if(isset($_POST['Submit']))
     else 
     {
         $to="do4anand@gmail.com";
-
-        if(mail($to,$subject,$msg,$email))
+        $headers =  'MIME-Version: 1.0' . "\r\n"; 
+        $headers .= "From: $email" . "\r\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
+        
+        if(mail($to,$subject,$msg,$headers))
         {
             header('location:../../../index.php?success');
         }

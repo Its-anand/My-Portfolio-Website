@@ -13,7 +13,7 @@ require('connection.php');
 #This is the code for Admin login
 if(isset($_POST['adminLogin']))
 {
-    $query = "SELECT * FROM `admin_login` WHERE  `admin_email`= '$_POST[admin_email]' AND `admin_password`='$_POST[admin_password]'";
+    $query = "SELECT * FROM `admin_login` WHERE  `admin_email`= '$_POST[admin_email]' OR `admin_name` = '$_POST[admin_email]'  AND `admin_password`='$_POST[admin_password]'";
     $result = mysqli_query($con,$query);
 
         if(mysqli_num_rows($result)==1)
@@ -35,7 +35,7 @@ if(isset($_POST['adminLogin']))
 }
 else if(isset($_POST['studentLogin']))
 {
-    $query = "SELECT * FROM `voter_id` WHERE  `stu_email`= '$_POST[stu_email]' AND `stu_password`= '$_POST[stu_password]'";
+    $query = "SELECT * FROM `voting_sys_voter_id` WHERE  `stu_email`= '$_POST[stu_email]' AND `stu_password`= '$_POST[stu_password]'";
     $result = mysqli_query($con,$query);
 
         if(mysqli_num_rows($result)==1)

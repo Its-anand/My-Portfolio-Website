@@ -7,19 +7,19 @@ if(!isset($_SESSION['AdminLoginId']))
     header("location: Admin Login.php");
 }
 
-$user_id = $_SESSION['UserLoginId'];
+$user_id = $_SESSION['AdminLoginId'];
 
 if(isset($_POST['submit']))
 {
 $order_id = $_POST['order_id'];
-$query = "SELECT * FROM orders WHERE order_id = '$order_id'";
+$query = "SELECT * FROM purehealth_orders WHERE order_id = '$order_id'";
 $result = mysqli_query($con,$query);
 $result_fetch=mysqli_fetch_array($result);
     if($result)
     {
         if(mysqli_num_rows($result)==1)
         {
-            $updatequery = "UPDATE `orders` SET `delivery_status`= 'Delivered' WHERE order_id = '$order_id'";
+            $updatequery = "UPDATE `purehealth_orders` SET `delivery_status`= 'Delivered' WHERE order_id = '$order_id'";
             $updatequery = mysqli_query($con, $updatequery);
             if($updatequery)
             {

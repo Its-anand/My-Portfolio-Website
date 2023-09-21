@@ -10,14 +10,14 @@ $user_id = $_SESSION['UserLoginId'];
 if(isset($_POST['Del_order']))
 {
 $card_id = $_POST['order_id'];
-$query = "SELECT * FROM orders where order_id ='$card_id'";
+$query = "SELECT * FROM purehealth_orders where order_id ='$card_id'";
 $result = mysqli_query($con,$query);
 $result_fetch=mysqli_fetch_array($result);
     if($result)
     {
         if(mysqli_num_rows($result)==1)
         {
-            $deletequery = "DELETE FROM `orders` WHERE order_id = $card_id";
+            $deletequery = "DELETE FROM `purehealth_orders` WHERE order_id = $card_id";
             $query = mysqli_query($con, $deletequery);
             echo"
             <script>

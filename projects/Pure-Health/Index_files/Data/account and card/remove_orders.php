@@ -11,14 +11,14 @@ $user_id = $_SESSION['UserLoginId'];
 if(isset($_POST['Del_item']))
 {
 $order_id = $_POST['product_id'];
-$query = "SELECT * FROM cart where product_id= '$order_id'";
+$query = "SELECT * FROM purehealth_cart where product_id= '$order_id' AND `user_id` = '$user_id'";
 $result = mysqli_query($con,$query);
 $result_fetch=mysqli_fetch_array($result);
     if($result)
     {
         if(mysqli_num_rows($result)==1)
         {
-            $deletequery = "DELETE FROM `cart` WHERE product_id = '$order_id'";
+            $deletequery = "DELETE FROM `purehealth_cart` WHERE product_id = '$order_id' AND `user_id` = '$user_id' ";
             $query = mysqli_query($con, $deletequery);
             echo"
             <script>

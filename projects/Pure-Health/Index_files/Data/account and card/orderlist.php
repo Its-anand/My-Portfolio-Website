@@ -283,7 +283,7 @@ main #flex-container
         </tr>
         
         <?php
-    $productquery = "SELECT * FROM orders where username='$username' AND delivery_status = 'Pending'";
+    $productquery = "SELECT * FROM purehealth_orders where username='$username' AND delivery_status = 'Pending'";
     $productresult = mysqli_query($con,$productquery);
 if($productresult)
 {

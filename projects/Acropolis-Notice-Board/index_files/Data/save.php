@@ -10,14 +10,14 @@ session_start();
          $userId = $_SESSION['userid'];
          $notice_id = $_POST['notice_id'];
          $notice_url = $_POST['notice_url'];
-         $likeQuery = "SELECT * FROM `saved` WHERE notice_id = '$notice_id' AND user_id = '$userId' ";
+         $likeQuery = "SELECT * FROM `acroboard_saved` WHERE notice_id = '$notice_id' AND user_id = '$userId' ";
          $likeResult = mysqli_query($con,$likeQuery);
          if($likeResult)
           {
 
             if(mysqli_num_rows($likeResult)==0)
             {
-               $insertSave = "INSERT INTO `saved`(`notice_id`, `user_id`) VALUES ('$notice_id','$userId')";
+               $insertSave = "INSERT INTO `acroboard_saved`(`notice_id`, `user_id`) VALUES ('$notice_id','$userId')";
                $Result = mysqli_query($con,$insertSave);
                if($Result)
                {
@@ -31,7 +31,7 @@ session_start();
             }
             else
             {
-               $delSave = "DELETE FROM `saved` WHERE notice_id = '$notice_id' AND user_id = '$userId'";
+               $delSave = "DELETE FROM `acroboard_saved` WHERE notice_id = '$notice_id' AND user_id = '$userId'";
                $Result = mysqli_query($con,$delSave);
                if($Result)
                {

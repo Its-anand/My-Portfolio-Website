@@ -186,7 +186,7 @@ if(isset($_GET['edit_submit']))
 {
     $notice_id = $_GET['notice_id'];
     $previous_page_url =  $_GET['previous_page_url'];
-    $query = "SELECT * FROM `notice` WHERE  `notice_id`= '$notice_id'";
+    $query = "SELECT * FROM `acroboard_notice` WHERE  `notice_id`= '$notice_id'";
     $result = mysqli_query($con, $query);
     $result_fetch = mysqli_fetch_assoc($result);
     $notice_date = $result_fetch['notice_date'];

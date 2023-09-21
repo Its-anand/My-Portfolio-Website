@@ -9,13 +9,13 @@ if(isset($_GET['del_saved_submit']))
 {
 $notice_id = $_GET['notice_id'];
 $previous_page_url =  $_GET['previous_page_url'];
-$query = "SELECT * FROM saved where `notice_id` = '$notice_id'";
+$query = "SELECT * FROM acroboard_saved where `notice_id` = '$notice_id'";
 $result = mysqli_query($con,$query);
     if($result)
     {
         if(mysqli_num_rows($result)==1)
         {
-            $deletequery = "DELETE FROM `saved` WHERE `notice_id`= '$notice_id'";
+            $deletequery = "DELETE FROM `acroboard_saved` WHERE `notice_id`= '$notice_id'";
             $query = mysqli_query($con, $deletequery);
             echo"
             <script>

@@ -9,19 +9,19 @@ if(isset($_GET['del_submit']))
 {
 $notice_id = $_GET['notice_id'];
 $previous_page_url =  $_GET['previous_page_url'];
-$query = "SELECT * FROM notice where `notice_id` = '$notice_id'";
+$query = "SELECT * FROM acroboard_notice where `notice_id` = '$notice_id'";
 $result = mysqli_query($con,$query);
     if($result)
     {
         if(mysqli_num_rows($result)==1)
         {
-            $deletequery = "DELETE FROM `notice` WHERE `notice_id`= '$notice_id'";
+            $deletequery = "DELETE FROM `acroboard_notice` WHERE `notice_id`= '$notice_id'";
             $noticedeleted = mysqli_query($con, $deletequery);
-            $delLike = "DELETE FROM `likes` WHERE notice_id = '$notice_id'";
+            $delLike = "DELETE FROM `acroboard_likes` WHERE notice_id = '$notice_id'";
             $likesdeleted = mysqli_query($con,$delLike);
-            $delSave = "DELETE FROM `saved` WHERE notice_id = '$notice_id' ";
+            $delSave = "DELETE FROM `acroboard_saved` WHERE notice_id = '$notice_id' ";
             $saveddeleted = mysqli_query($con,$delSave);
-            $delSave = "DELETE FROM `comments` WHERE notice_id = '$notice_id'";
+            $delSave = "DELETE FROM `acroboard_comments` WHERE notice_id = '$notice_id'";
             $commentdeleted = mysqli_query($con,$delSave);
          if($query)
             {

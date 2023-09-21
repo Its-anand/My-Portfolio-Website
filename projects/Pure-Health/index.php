@@ -194,7 +194,7 @@ session_start();
     <!--PHP START-->
     <?php
 include './Index_files/Data/connection.php';
-$selectquery = "select * from products where id = 1 ";
+$selectquery = "select * from purehealth_products where id = 1 ";
 $query = mysqli_query($con,$selectquery);
 $res = mysqli_fetch_array($query);
 ?>
@@ -205,7 +205,7 @@ $res = mysqli_fetch_array($query);
       <div id='flex-container'>
         <div id="flex">
           <?php
-    $productquery = "SELECT * FROM products";
+    $productquery = "SELECT * FROM purehealth_products";
     $productresult = mysqli_query($con,$productquery);
 if($productresult)
 {
@@ -310,11 +310,11 @@ if($productresult)
     </div>
     <div id="footer_section">
       <div id="share">
-        <p id="share-text">Share Us</p>
+        <p id="share-text">Contact Us</p>
         <table id="share_icon">
           <tr>
             <td>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//its-anand.github.io/CollegeProject-Sem5th/"
+              <a href="https://www.facebook.com/"
                 target="_blank"><svg id="facebook_share" class="share_style" xmlns="http://www.w3.org/2000/svg"
                   fill="#00e300" viewBox="0 0 50 50">
                   <path
@@ -322,7 +322,7 @@ if($productresult)
                   </svg></a>
             </td>
             <td>
-              <a href="https://msng.link/o/?https://its-anand.github.io/CollegeProject-Sem5th/=ig" target="_blank"><svg
+              <a href="https://www.instagram.com/" target="_blank"><svg
                   id="instagram_share" class="share_style" xmlns="http://www.w3.org/2000/svg" fill="#00e300"
                   viewBox="0 0 50 50">
                   <path
@@ -330,7 +330,7 @@ if($productresult)
                   </svg></a>
             </td>
             <td>
-              <a href="https://twitter.com/intent/tweet?text=https%3A//its-anand.github.io/CollegeProject-Sem5th/"
+              <a href="https://twitter.com//"
                 target="_blank"><svg id="twitter_share" class="share_style" xmlns="http://www.w3.org/2000/svg"
                   fill="#00e300" viewBox="0 0 50 50">
                   <path

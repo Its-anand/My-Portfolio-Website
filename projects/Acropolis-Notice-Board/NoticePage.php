@@ -31,11 +31,11 @@ if(isset($_SERVER['HTTPS']) && $_SERVER['HTTP'] === 'on')
 
 <?php
       //Like Count Code
-      $likeQuery = "SELECT * FROM `likes` WHERE  `notice_id`= '$notice_id'";
+      $likeQuery = "SELECT * FROM `acroboard_likes` WHERE  `notice_id`= '$notice_id'";
       $likeResult = mysqli_query($con,$likeQuery);
       $likeNo = mysqli_num_rows($likeResult);
       //Comment count code
-      $commentQuery = "SELECT * FROM `comments` WHERE  `notice_id`= '$notice_id'";
+      $commentQuery = "SELECT * FROM `acroboard_comments` WHERE  `notice_id`= '$notice_id'";
       $commentResult = mysqli_query($con,$commentQuery);
       $commentNo = mysqli_num_rows($commentResult);
 ?>
@@ -115,7 +115,7 @@ else
          <div class='comment_section'>
             <?php
             
-               $commentQuery = "SELECT * FROM `comments` WHERE notice_id = '$notice_id'";
+               $commentQuery = "SELECT * FROM `acroboard_comments` WHERE notice_id = '$notice_id'";
                $commentResult = mysqli_query($con,$commentQuery);
                if($commentResult)
                {
@@ -264,11 +264,11 @@ else
       <ul>
          <?php
             $adminId = $_SESSION['admin_name'];
-            $selectquery = "SELECT * FROM `saved` WHERE 	user_id = '$adminId'  ";
+            $selectquery = "SELECT * FROM `acroboard_saved` WHERE 	user_id = '$adminId'  ";
             $query = mysqli_query($con,$selectquery);
             while($ress = mysqli_fetch_array($query))
                   {  
-               $select_notice_query = "SELECT * FROM `notice` WHERE notice_id ='$ress[notice_id]' ";
+               $select_notice_query = "SELECT * FROM `acroboard_notice` WHERE notice_id ='$ress[notice_id]' ";
                $notice_query = mysqli_query($con,$select_notice_query);
                $res = mysqli_fetch_array($notice_query);
            ?>
@@ -328,11 +328,11 @@ else
 
       <ul>
          <?php
-            $selectquery = "SELECT * FROM `saved` WHERE 	user_id = '$userId'  ";
+            $selectquery = "SELECT * FROM `acroboard_saved` WHERE 	user_id = '$userId'  ";
             $query = mysqli_query($con,$selectquery);
             while($ress = mysqli_fetch_array($query))
                   {  
-               $select_notice_query = "SELECT * FROM `notice` WHERE notice_id ='$ress[notice_id]' ";
+               $select_notice_query = "SELECT * FROM `acroboard_notice` WHERE notice_id ='$ress[notice_id]' ";
                $notice_query = mysqli_query($con,$select_notice_query);
                $res = mysqli_fetch_array($notice_query);
            ?>
@@ -411,7 +411,7 @@ else
             if(isset($_GET['id']))
             {
                $notice_id = $_GET['id'];
-               $query = "SELECT * FROM `notice` WHERE  `notice_id`= '$notice_id'";
+               $query = "SELECT * FROM `acroboard_notice` WHERE  `notice_id`= '$notice_id'";
                $result = mysqli_query($con,$query);
                $result_fetch=mysqli_fetch_assoc($result);
                $notice_date=$result_fetch['notice_date'];

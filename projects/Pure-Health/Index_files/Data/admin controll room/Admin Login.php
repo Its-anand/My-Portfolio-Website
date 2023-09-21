@@ -142,7 +142,7 @@ session_start();
 #This is the code for login
 if(isset($_POST['Signin']))
 {
-    $query = "SELECT * FROM `admin_login` WHERE  `email`= '$_POST[email_username]' OR `Admin_name`='$_POST[email_username]' AND `Admin_password`='$_POST[password]'";
+    $query = "SELECT * FROM `admin_login` WHERE  `admin_email`= '$_POST[email_username]' OR `admin_name`='$_POST[email_username]' AND `admin_password`='$_POST[password]'";
 
     $result = mysqli_query($con,$query);
 
@@ -150,8 +150,8 @@ if(isset($_POST['Signin']))
         {
         $result_fetch=mysqli_fetch_assoc($result);
         session_start();
-        $_SESSION['AdminLoginId']=$result_fetch['Admin_name'];
-        header("location: Admin Panel.php");
+        $_SESSION['AdminLoginId']=$result_fetch['admin_name'];
+        header("location: ./Admin Panel.php");
         }
         else
         {

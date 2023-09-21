@@ -394,7 +394,7 @@ main #flex-container
 <?php 
 
 $user_id = $_SESSION['UserLoginId'];
-$selectquery = "SELECT * FROM cart where user_id='$user_id'";
+$selectquery = "SELECT * FROM purehealth_cart where user_id='$user_id'";
 $result = mysqli_query($con,$selectquery);
 
 if($result)
@@ -405,7 +405,7 @@ while($result_fetched = mysqli_fetch_array($result))
 {
     $id=$result_fetched['product_id'];
     $card_id = $result_fetched['id'];
-    $productquery = "SELECT * FROM products where id='$id'";
+    $productquery = "SELECT * FROM purehealth_products where id='$id'";
     $productresult = mysqli_query($con,$productquery);
     if($productresult)
     {

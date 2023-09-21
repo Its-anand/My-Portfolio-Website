@@ -1202,7 +1202,7 @@ main .posts #post {
 }
 #share svg {
   width: 7vw;
-  height: 5.5vh;
+  height: 13.5vh;
 }
 
 }
@@ -1236,5 +1236,9 @@ header .logo-text {
   width: 44vw;
   height: 5.4vh;
   font-size: 7.3vw;
+}
+#share svg {
+  width: 7vw;
+  height: 11vh;
 }
 }

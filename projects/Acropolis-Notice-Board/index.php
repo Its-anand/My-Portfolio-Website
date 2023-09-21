@@ -393,7 +393,7 @@ else
         <img title="setting" class="button_style setting" src="./index_files/image/setting.jpg" alt="">
       </div>
       <?php
-            $selectquery = "select * from notice ";
+            $selectquery = "select * from acroboard_notice ";
             $query = mysqli_query($con,$selectquery);
             while($res = mysqli_fetch_array($query))
             {

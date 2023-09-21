@@ -13,7 +13,7 @@ if(!isset($_SESSION['logged_in']))
         $updated_description = $_POST['description'];
         $updated_example = $_POST['example'];
     
-        $updated_quary = "UPDATE `products` SET `word`='$updated_word',`word_meaning`='$updated_word_meaning',`description`='$updated_description',`example`='$updated_example' WHERE id = '$word_id'";
+        $updated_quary = "UPDATE `cew_words` SET `word`='$updated_word',`word_meaning`='$updated_word_meaning',`description`='$updated_description',`example`='$updated_example' WHERE id = '$word_id'";
         $result = mysqli_query($con,$updated_quary);
         if($result)
         {

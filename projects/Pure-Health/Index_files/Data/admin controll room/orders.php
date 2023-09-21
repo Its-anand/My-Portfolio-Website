@@ -1,7 +1,7 @@
 <?php
 include '../connection.php';
 session_start();
-$username =  $_SESSION['username'];
+$username =  $_SESSION['AdminLoginId'];
 if(!isset($_SESSION['AdminLoginId']))
 {
     header("location: Admin Login.php");
@@ -255,7 +255,7 @@ main #flex-container
 <div id="header_holder"><div id="header">
         <div id="left_div">
             <div class="img_holder"><img src="../../Image/account_logo.png" class="header_img" alt="account_logo"></div>
-            <div><p><?php echo $_SESSION['UserLoginId']?></p></div>
+            <div><p><?php echo $_SESSION['AdminLoginId']?></p></div>
         </div>
         <div id="right_div">
      <form style="cursor: pointer;" method="post" action="../../Data/account and card/logout.php">
@@ -287,7 +287,7 @@ main #flex-container
         <th>Date</th>
         </tr>
         <?php
-    $productquery = "SELECT * FROM orders WHERE delivery_status = 'Pending'";
+    $productquery = "SELECT * FROM purehealth_orders WHERE delivery_status = 'Pending'";
     $productresult = mysqli_query($con,$productquery);
 if($productresult)
 {

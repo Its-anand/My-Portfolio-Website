@@ -297,7 +297,7 @@ session_start();
     <table id='myTable'>
         
         <?php
-            $selectquery = "select * from products ";
+            $selectquery = "select * from cew_words ";
             $query = mysqli_query($con,$selectquery);
             while($res = mysqli_fetch_array($query))
             {

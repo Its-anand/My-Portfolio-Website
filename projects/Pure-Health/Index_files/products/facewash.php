@@ -6,7 +6,7 @@
 <?php
 include '../Data/connection.php';
 $id=2;
-$selectquery = " SELECT * FROM products where id= 2 ";
+$selectquery = " SELECT * FROM purehealth_products where id= 2 ";
 $query = mysqli_query($con,$selectquery);
 $res = mysqli_fetch_array($query);
 session_start();

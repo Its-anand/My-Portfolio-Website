@@ -11,7 +11,7 @@ session_start();
          $notice_id = $_POST['notice_id'];
          $notice_url = $_POST['notice_url'];
          $commentMsg = $_POST['comment_message'];
-               $insertComment = "INSERT INTO `comments`(`notice_id`, `user_id`, `comment`) VALUES ('$notice_id','$userId','$commentMsg')";
+               $insertComment = "INSERT INTO `acroboard_comments`(`notice_id`, `user_id`, `comment`) VALUES ('$notice_id','$userId','$commentMsg')";
                $Result = mysqli_query($con,$insertComment);
                if($Result)
                {
@@ -28,7 +28,7 @@ session_start();
          $notice_id = $_POST['notice_id'];
          $notice_url = $_POST['notice_url'];
          $commentMsg = $_POST['comment_message'];
-               $insertComment = "INSERT INTO `comments`(`notice_id`, `user_id`, `comment`) VALUES ('$notice_id','$userId','$commentMsg')";
+               $insertComment = "INSERT INTO `acroboard_comments`(`notice_id`, `user_id`, `comment`) VALUES ('$notice_id','$userId','$commentMsg')";
                $Result = mysqli_query($con,$insertComment);
                if($Result)
                {

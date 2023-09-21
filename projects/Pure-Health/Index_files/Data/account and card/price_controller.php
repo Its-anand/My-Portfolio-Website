@@ -172,7 +172,7 @@ if(isset($_POST['submit']))
     $moisturizer=$_POST['moisturizer']; 
     $shampoo=$_POST['shampoo']; 
     $soap=$_POST['soap'];  
-    $insertquery ="UPDATE `products` SET `body_lotion_price`='$body_lotion',`facewash_price`='$facewash',`herbal_conditioner_price`='$herbal_conditioner',`moisturizer`='$moisturizer',`shampoo`='$shampoo',`soap`='$soap' WHERE id='1'";
+    $insertquery ="UPDATE `purehealth_products` SET `body_lotion_price`='$body_lotion',`facewash_price`='$facewash',`herbal_conditioner_price`='$herbal_conditioner',`moisturizer`='$moisturizer',`shampoo`='$shampoo',`soap`='$soap' WHERE id='1'";
     
     $res = mysqli_query($con, $insertquery);
     if($res){

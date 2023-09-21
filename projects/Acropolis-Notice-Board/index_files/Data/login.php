@@ -13,7 +13,8 @@ require('connection.php');
 #This is the code for Admin login
 if(isset($_POST['submit']))
 {
-    $query = "SELECT * FROM `admin_login` WHERE  `admin_name`= '$_POST[admin_name]' AND `admin_password`='$_POST[admin_password]'";
+    $query = "SELECT * FROM `admin_login` WHERE  `admin_email`= '$_POST[admin_name]' OR `admin_name`='$_POST[admin_name]' AND `admin_password`='$_POST[admin_password]'";
+
     $previous_page_url =  $_POST['previous_page_url'];
     $result = mysqli_query($con,$query);
 
@@ -40,7 +41,7 @@ if(isset($_POST['submit']))
 #This is the code for Student login
 if(isset($_POST['slogin']))
 {
-    $query = "SELECT * FROM `stu_login` WHERE  `stu_name`= '$_POST[stu_name]' AND `stu_password`='$_POST[stu_password]'";
+    $query = "SELECT * FROM `user_login` WHERE  `username`= '$_POST[stu_name]' OR `user_email` = '$_POST[stu_name]' AND `user_password`='$_POST[stu_password]'";
     $previous_page_url =  $_POST['previous_page_url'];
 
     $result = mysqli_query($con,$query);

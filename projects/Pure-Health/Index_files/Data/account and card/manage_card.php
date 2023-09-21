@@ -9,14 +9,14 @@ $user_id = $_SESSION['UserLoginId'];
 if(isset($_POST['Add_To_Cart']))
 {
 $product_id = $_POST['product_id'];
-$query = "SELECT * FROM products where id='$product_id'";
+$query = "SELECT * FROM purehealth_products where id='$product_id'";
 $result = mysqli_query($con,$query);
 $result_fetch=mysqli_fetch_array($result);
 if($result)
 {
 if(mysqli_num_rows($result)==1)
 {
-$user_exist_query="SELECT * FROM `cart` where `user_id`= '$user_id' AND `product_id` ='$product_id'";
+$user_exist_query="SELECT * FROM `purehealth_cart` where `user_id`= '$user_id' AND `product_id` ='$product_id'";
 $found=mysqli_query($con,$user_exist_query);
 
 if($found){
@@ -44,7 +44,7 @@ if(mysqli_num_rows($found)>0)
 }
 
     else{
-   $query2="INSERT INTO `cart`(`user_id`, `product_id`) VALUES ('$user_id','$product_id')";
+   $query2="INSERT INTO `purehealth_cart`(`user_id`, `product_id`) VALUES ('$user_id','$product_id')";
    $insertquery = mysqli_query($con,$query2);
    if($insertquery)
    {

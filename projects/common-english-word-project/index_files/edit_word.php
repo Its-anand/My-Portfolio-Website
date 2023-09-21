@@ -135,7 +135,7 @@ if(!isset($_SESSION['logged_in']))
 if(isset($_POST['edit_word']))
 {
 $word_id = $_POST['edit_word_id'];
-$query = "SELECT * FROM products where id = '$word_id'";
+$query = "SELECT * FROM cew_words where id = '$word_id'";
 $result = mysqli_query($con,$query);
     if($result)
     {

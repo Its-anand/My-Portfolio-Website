@@ -180,7 +180,7 @@ include 'connection.php';
     <table id='myTable'>
         
         <?php
-            $selectquery = "select * from products ";
+            $selectquery = "select * from purehealth_products ";
             $query = mysqli_query($con,$selectquery);
             while($res = mysqli_fetch_array($query))
             {

@@ -7,7 +7,7 @@ if(isset($_POST['submit']))
     $description = $_POST['description'];
     $example=$_POST['example'];
     
-    $word_exist_query="SELECT * FROM `products` where `word`= '$_POST[word]'";
+    $word_exist_query="SELECT * FROM `cew_words` where `word`= '$_POST[word]'";
     $result=mysqli_query($con,$word_exist_query);
     if($result)
     {
@@ -27,7 +27,7 @@ if(isset($_POST['submit']))
         }
         else
         {
-    $query="INSERT INTO `products`(`word`, `word_meaning`, `description`, `example`) VALUES ('$word','$word_meaning','$description','$example')";
+    $query="INSERT INTO `cew_words`(`word`, `word_meaning`, `description`, `example`) VALUES ('$word','$word_meaning','$description','$example')";
     $result = mysqli_query($con,$query);
     if($result)
     {

@@ -102,7 +102,7 @@ include 'connection.php';
                     <th style='width: 10%;'>Total Votes</th>
                 </tr>
                 <?php
-            $query = "SELECT * FROM ` political_parties`";
+            $query = "SELECT * FROM ` voting_sys_political_parties`";
             $result = mysqli_query($con,$query);
         if($result)
         {

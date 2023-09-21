@@ -14,7 +14,7 @@ if(!isset($_SESSION['logged_in']))
 
 if(isset($_POST['hidden']))
 {
-$query = "SELECT * FROM `orders`";
+$query = "SELECT * FROM `purehealth_orders`";
 $result = mysqli_query($con,$query);
     if($result)
     {
@@ -76,7 +76,7 @@ $result = mysqli_query($con,$query);
    }*/
         
         
-             $query="INSERT INTO `orders`(`date`, `name`, `username`, `number`, `email`, `address`, `pincode`, `product_id`, `order_id`, `product_name`, `product_counter`, `product_price`, `payment_status`,`delivery_status`) VALUES ('$date','$name','$username','$number','$email','$address','$pincode','$product_id','$order_id','$product_name','$product_counter','$product_price','1','Pending')";
+             $query="INSERT INTO `purehealth_orders`(`date`, `name`, `username`, `number`, `email`, `address`, `pincode`, `product_id`, `order_id`, `product_name`, `product_counter`, `product_price`, `payment_status`,`delivery_status`) VALUES ('$date','$name','$username','$number','$email','$address','$pincode','$product_id','$order_id','$product_name','$product_counter','$product_price','1','Pending')";
              $res = mysqli_query($con,$query);
              if($res /*Php code was here*/)//this code -> && sendMail($email)
          {
