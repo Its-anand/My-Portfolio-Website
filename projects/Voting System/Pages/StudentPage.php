@@ -24,6 +24,7 @@ if(!isset($_SESSION['StudentLoginId']))
             background: linear-gradient(#29317b, #1f2060, #161045);
             background-repeat: no-repeat;
             color: #fff;
+            min-height:100vh;
         }
 
         header {
