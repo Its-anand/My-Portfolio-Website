@@ -6,69 +6,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-        body{
-            background: linear-gradient(#00000080, #000000c7), url('../images/loginImage.jpg') ;
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 100%;
+        body {
+            margin: 0;
+            background: linear-gradient(#29317b, #1f2060, #161045);
             height: 100vh;
-            overflow: hidden;
+            padding: 0%;
             display: flex;
-            justify-content: center;
+            justify-items: center;
             align-items: center;
-            flex-direction: column;
-            font-family: sans-serif;
         }
-        main{
-            width: 30rem;
-            height: 25rem;
-            background-color: #fff;
+
+        .signIn_holder,
+        .forget_holder{
+            background: rgb(255, 255, 255);
+            width: 29.6rem;
+            height: 100vh;
             padding: 3rem;
+            display: flex;
+            align-items: center;
             box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
 
-        .inputStyle{
-            border: none;
-            border-bottom: 1px solid #000;
-            width: 100%;
-            height: 2.5rem;
-            outline: none;
-            color: #000;
-            font-size: 1.1rem;
-            box-sizing: border-box;
+        .hidden {
+            display: none;
+        }
+        .leftDiv form,
+        .rightDiv form {
+            text-align: center;
+        }
+
+        input,a {
             margin-bottom: 2rem;
+        }
 
-        }
-        .inputStyle::placeholder{
-            color: #0000007b;
-        }
-        .inputStyle:focus{
-            background-color: #00000036;
-        }
-        .SignInButton{
-            width: 10rem;
-            height: 3rem;
-            font-size: large;
+        .form_input {
+            width: 100%;
+            height: 30px;
             border: none;
-            cursor: pointer;
-            color: #000;
-            border: 2px solid #000000;
+            border-bottom: 1px solid #29317b;
+            outline: none;
         }
-        .SignInButton:active{
-            background-color: #000;
+
+        .form_btn {
+            width: 100%;
+            height: 30px;
+        }
+
+
+        #submit_btn {
+            height: 35px;
+            background-color: #29317b;
             color: #fff;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
 
         }
+        
+        #submit_btn:hover {
+            border-radius: 20px;
+        }
+        #br{
+            display: none;
+        }
+        
+        #forget,
+        #signUp,
+        #signIn,
+        .forget_btn {
+            text-decoration: none;
+            color: #29317b;
+            font-size: 1.1em;
+            cursor: pointer;
+            font-family: sans-serif; 
+  
+               }
+         .heading
+         {
+           font-family: sans-serif; 
+           color: #29317b;
+         }
+        .forget_btn
+        {
+            margin-left: 5%;
+        }
+    @media screen and (max-width:475px) {
+        body {
+            background: #fff;
+        }
+        .signIn_holder{
+            width: 100%;
+            padding: 2rem;
+        }
+    }
+    @media screen and (max-width:300px) {
+            #br{
+            display: inline;
+        }
+    }
+    
     </style>
 </head>
 <body>
-         <main id='studentLogin'>
-         <h1>Student Login</h1>
-         <form action='../Database/idChecker.php' method='post'>
-          <input type='email' name="stu_email" placeholder='Student Id' class='inputStyle'>
-          <input type='password' name="stu_password" placeholder='Password' class='inputStyle'>
-          <button type='submit' name='studentLogin' class='SignInButton'>Submit</button>
-         </form>    
-         </main>    
+         <div class="signIn_holder">
+            <div class="leftDiv">
+            <h2 class='heading'>Student Login</h2>
+            <form action='../Database/idChecker.php' method='post'>
+                <input type='email' name="stu_email" placeholder='Student Id' class="form_input" required >
+                <input type='password' name="stu_password" placeholder='Password' class="form_input" required >
+                <button type='submit' name='studentLogin' id="submit_btn" class="form_btn">Submit</button>
+               </form>   
+            </div>
+        </div>
 </body>
 </html>
