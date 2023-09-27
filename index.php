@@ -16,6 +16,54 @@
     html {
       scroll-behavior: smooth;
     }
+    .logo--preloader{
+  text-decoration: none;
+  font-family: 'Pirata One', cursive;
+  color: var(--color);
+  font-size: 4rem;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+}
+.progressWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+  z-index: 10;
+}
+
+progress {
+  border: 5px solid white;
+  border-radius: 30px;
+  width: 70vw;
+  height: 3rem;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+}
+
+progress::-webkit-progress-bar {
+  background-color: #fff;
+  border-radius: 30px;
+
+}
+
+progress::-webkit-progress-value {
+  border-radius: 30px;
+  background-color: black;
+
+}
+
+progress::-moz-progress-bar {
+  border-radius: 30px;
+  background-color: black;
+}
+
   </style>
 </head>
 
@@ -230,17 +278,18 @@
           <div class="word--blog">
             <p>Blogs</p>
           </div>
-          <div class="date">March 2022</div>
+          <div class="date">September 2023</div>
           <div class="blogsListContainer">
 
             <a href="https://github.com/Its-anand/Pure-Health" class="blogs">
               <div class="blogsDescription">
-                <p>Sunset On The Beach css only art</p>
+                <p>An informal introduction</p>
               </div>
               <div id="blogViewButton">
                 <p>Read</p>
               </div>
             </a>
+            <!--
 
             <a href="https://github.com/Its-anand/Pure-Health" class="blogs">
               <div class="blogsDescription">
@@ -300,7 +349,6 @@
                 <p>Read</p>
               </div>
             </a>
-
             <a href="https://github.com/Its-anand/Pure-Health" class="blogs">
               <div class="blogsDescription">
                 <p>Sunset On The Beach css only art</p>
@@ -309,6 +357,7 @@
                 <p>Read</p>
               </div>
             </a>
+          -->
           </div>
         </div>
       </section>
@@ -334,15 +383,31 @@
     </section>
 
     <section class="contact--page">
+
       <div id="contactMe--cancelButton" onclick="hideContactMePage()">
         <img src="./Images/cancel button.svg" alt="cancel button">
       </div>
+      <?php 
+      $msg= "";
+      if(isset($_GET['error']))
+      {
+          $msg="Please fill all the option";
+          echo ( "<div style=' width: 100%; height: 3rem; background-color: #04aa49; margin:2rem 0; box-sizing:border-box; '><p style='padding:3% 0;'>".$msg."</p></div>");
+          ;
+      }
+      if(isset($_GET['success']))
+      {
+          $msg="message is sent successfully.";
+          echo ( "<div style=' width: 100%; height: 3rem; background-color: #04aa49; margin:2rem 0; box-sizing:border-box; '><p style='padding:3% 0;'>".$msg."</p></div>");
+          ;
+      }
+      ?>
       <div class="contact--grid-property-container">
         <div class="contactme-contactlinks contactMe--form-container">
-          <form class="contactMe--form" method="post" action="#">
-            <input type="email" placeholder="Email" id="contactUs-email" name="" >
-          <input type="password" placeholder="Email" id="contactUs-password" name="" >
-          <textarea name="Message" placeholder="Message" id="contactUs-message" cols="30" rows="10"></textarea>
+          <form class="contactMe--form" method="post" action="/contactForm.php">
+          <input type="email" placeholder="Email" id="contactUs-email" name="email" >
+          <input type="text" placeholder="Subject" id="contactUs-subject" name="subject" >
+          <textarea name="Message" placeholder="Message" id="contactUs-message" name="msg" cols="30" rows="10"></textarea>
           <input type="submit" id="contactUs-submit-button" value="Submit">
           </div>
         </form>
