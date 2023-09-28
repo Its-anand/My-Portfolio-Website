@@ -387,21 +387,6 @@ progress::-moz-progress-bar {
       <div id="contactMe--cancelButton" onclick="hideContactMePage()">
         <img src="./Images/cancel button.svg" alt="cancel button">
       </div>
-      <?php 
-      $msg= "";
-      if(isset($_GET['error']))
-      {
-          $msg="Please fill all the option";
-          echo ( "<div style=' width: 100%; height: 3rem; background-color: #04aa49; margin:2rem 0; box-sizing:border-box; '><p style='padding:3% 0;'>".$msg."</p></div>");
-          ;
-      }
-      if(isset($_GET['success']))
-      {
-          $msg="message is sent successfully.";
-          echo ( "<div style=' width: 100%; height: 3rem; background-color: #04aa49; margin:2rem 0; box-sizing:border-box; '><p style='padding:3% 0;'>".$msg."</p></div>");
-          ;
-      }
-      ?>
       <div class="contact--grid-property-container">
         <div class="contactme-contactlinks contactMe--form-container">
           <form class="contactMe--form" method="post" action="/contactForm.php">
@@ -409,6 +394,26 @@ progress::-moz-progress-bar {
           <input type="text" placeholder="Subject" id="contactUs-subject" name="subject" >
           <textarea name="Message" placeholder="Message" id="contactUs-message" name="msg" cols="30" rows="10"></textarea>
           <input type="submit" id="contactUs-submit-button" value="Submit">
+          <?php 
+      $msg= "";
+      if(isset($_GET['submit']))
+      {
+          $msg="Please click submit button";
+          echo ( "<div style=' width: 100%; height: 3rem; background-color: #04aa49; margin:2rem 0; box-sizing:border-box; '><p style='padding:3% 0;'>".$msg."</p></div>");
+          ;
+      }
+      else if(isset($_GET['empty'])){
+        $msg="Please fill all the option";
+        echo ( "<div style=' width: 100%; height: 3rem; background-color: #04aa49; margin:2rem 0; box-sizing:border-box; '><p style='padding:3% 0;'>".$msg."</p></div>");
+        ;
+      }
+      else if(isset($_GET['success']))
+      {
+          $msg="message is sent successfully.";
+          echo ( "<div style=' width: 100%; height: 3rem; background-color: #04aa49; margin:2rem 0; box-sizing:border-box; '><p style='padding:3% 0;'>".$msg."</p></div>");
+          ;
+      }
+      ?>
           </div>
         </form>
         <div class="contactme-contactlinks contactlinks">
