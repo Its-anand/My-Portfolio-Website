@@ -20,8 +20,6 @@ if(isset($_POST['Submit']))
 }
 else 
 {
-    echo("1");
-    echo "$email "," $subject "," $msg ";
-    // header('location:index.php?submit');
+    header('location:index.php?submit');
 }
 ?>
