@@ -394,9 +394,8 @@ progress::-moz-progress-bar {
           <input type="text" placeholder="Subject" id="contactUs-subject" name="subject" >
           <textarea name="Message" placeholder="Message" id="contactUs-message" name="msg" cols="30" rows="10"></textarea>
           <input type="submit" id="contactUs-submit-button" value="Submit">
-          </div>
-        </form>
-        <?php 
+          </form>
+          <?php 
       $msg= "";
       if(isset($_GET['submit']))
       {
@@ -416,8 +415,9 @@ progress::-moz-progress-bar {
           ;
       }
       ?>
-        <div class="contactme-contactlinks contactlinks">
 
+        </div>
+        <div class="contactme-contactlinks contactlinks">
           <div class="fancy--border">
           </div>
           <div class="contactMe--word-style">
