@@ -392,7 +392,7 @@ progress::-moz-progress-bar {
           <form class="contactMe--form" method="POST" action="contactForm.php">
           <input type="email" placeholder="Email" id="contactUs-email" name="email" >
           <input type="text" placeholder="Subject" id="contactUs-subject" name="subject" >
-          <textarea name="Message" placeholder="Message" id="contactUs-message" name="msg" cols="30" rows="10"></textarea>
+          <textarea placeholder="Message" id="contactUs-message" name="msg" cols="30" rows="10"></textarea>
           <input type="submit" id="contactUs-submit-button" name="submit">
           </form>
           <?php 
