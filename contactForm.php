@@ -6,7 +6,8 @@ if(isset($_POST['submit']))
     $msg = $_POST['msg'];
     if(empty($subject) || empty($email) || empty($msg))
     {
-        header('location:index.php?empty');
+        echo($email. "" . $subject. "" . $msg);
+       # header('location:index.php?empty');
     }
     else 
     {
@@ -20,7 +21,6 @@ if(isset($_POST['submit']))
 }
 else 
 {
-    echo($email. "" . $subject. "" . $msg);
-  #  header('location:index.php?submit');
+    header('location:index.php?submit');
 }
 ?>
