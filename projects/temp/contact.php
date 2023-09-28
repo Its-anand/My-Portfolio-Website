@@ -17,5 +17,5 @@ if($email != NULL) {
 }
  
 // Redirect to
-header("Location:index.html");
+header("Location:index.php");
 ?>
