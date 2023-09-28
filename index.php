@@ -401,18 +401,18 @@ progress::-moz-progress-bar {
       {
           $msg="Please click submit button";
           echo ( "<div style=' border: 3px solid #fff; border-radius: 35px; padding: 0px 6rem; font-family: sans-serif; background-color: #f53030;'><p>".$msg."</p></div>");
-          ;
+          
       }
       else if(isset($_GET['empty'])){
         $msg="Please fill all the option";
-        echo ( "<div style=' border: 3px solid #fff; border-radius: 35px; padding: 0px 6rem; font-family: sans-serif; background-color: #f53030;><p>".$msg."</p></div>");
-        ;
+          echo ( "<div style=' border: 3px solid #fff; border-radius: 35px; padding: 0px 6rem; font-family: sans-serif; background-color: #f53030;'><p>".$msg."</p></div>");
+        
       }
       else if(isset($_GET['success']))
       {
           $msg="message is sent successfully.";
           echo ( "<div style=' border: 3px solid #fff; border-radius: 35px; padding: 0px 6rem; font-family: sans-serif; background-color: #04aa49;><p>".$msg."</p></div>");
-          ;
+          
       }
       ?>
 
