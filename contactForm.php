@@ -1,8 +1,8 @@
 <?php
 if(isset($_POST['Submit']))
 {
-    $subject = $_POST['subject'];
     $email = $_POST['email'];
+    $subject = $_POST['subject'];
     $msg = $_POST['msg'];
     if(empty($subject) || empty($email) || empty($msg))
     {
