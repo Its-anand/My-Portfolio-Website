@@ -115,7 +115,7 @@ include 'connection.php';
                 {
                 ?>
                 <tr>
-                    <th><img width='50px' src="<?php echo $res['party_logo']?>" alt=""></th>
+                    <th><img width='50px' src="<?php echo $res['party_logo']?>" ></th>
                     <th><?php echo $res['party_name']?></th>
                     <th><?php echo $res['candidate_name']?></th>
                     <th><?php echo $res['vote']?></th>

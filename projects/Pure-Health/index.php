@@ -217,7 +217,7 @@ if($productresult)
 
           <a href="<?php echo $res['pageurl']?>">
             <div id="post<?php echo $res['id']?>" class="CommanCss">
-              <img src="data:image/webp;base64,<?php echo base64_encode($res['image']); ?>">
+              <img src="<?php echo $res['image']?>">
               <h2 id="price">Price- <?php echo $res['price']?>/- Only</h2>
               <h2><?php echo $res['product_name']?></h2>
               <p><?php echo $res['description']?></p>
