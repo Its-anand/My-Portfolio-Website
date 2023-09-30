@@ -389,10 +389,10 @@ progress::-moz-progress-bar {
       </div>
       <div class="contact--grid-property-container">
         <div class="contactme-contactlinks contactMe--form-container">
-          <form class="contactMe--form" method="POST" action="contactForm.php">
+          <form class="contactMe--form" method="POST" action="./includes/contact.php">
           <input type="email" placeholder="Email" id="contactUs-email" name="email" >
           <input type="text" placeholder="Subject" id="contactUs-subject" name="subject" >
-          <textarea placeholder="Message" id="contactUs-message" name="msg" cols="30" rows="10"></textarea>
+          <textarea placeholder="Message" id="contactUs-message" cols="30" rows="10" name="msg" ></textarea>
           <input type="submit" id="contactUs-submit-button" name="submit">
           </form>
           <?php 
@@ -400,23 +400,42 @@ progress::-moz-progress-bar {
       if(isset($_GET['submit']))
       {
           $msg="Please click submit button";
-          echo ( "<div style=' border: 3px solid #fff; border-radius: 35px; padding: 0px 6rem; font-family: sans-serif; background-color: #f53030;'><p>".$msg."</p></div>");
+          echo ( "
+          <div style=' border: 3px solid #fff; border-radius: 35px; padding: 0px 6rem; font-family: sans-serif; background-color: #f53030;'>
+            <p>".$msg."</p>
+          </div>
+          ");
           
       }
       else if(isset($_GET['empty'])){
         $msg="Please fill all the option";
-          echo ( "<div style=' border: 3px solid #fff; border-radius: 35px; padding: 0px 6rem; font-family: sans-serif; background-color: #f53030;'><p>".$msg."</p></div>");
+        echo ( "
+        <div style=' border: 3px solid #fff; border-radius: 35px; padding: 0px 6rem; font-family: sans-serif; background-color: #f53030;'>
+          <p>".$msg."</p>
+        </div>
+        <script>document.querySelector('.contact--page').style.left = '0px'</script>
+        ");
         
       }
       else if(isset($_GET['mailerror'])){
         $msg="Error occur while sending the message";
-        echo ( "<div style=' border: 3px solid #fff; border-radius: 35px; padding: 0px 6rem; font-family: sans-serif; background-color: #f53030;'><p>".$msg."</p></div>");
+        echo ( "
+        <div style=' border: 3px solid #fff; border-radius: 35px; padding: 0px 6rem; font-family: sans-serif; background-color: #f53030;'>
+          <p>".$msg."</p>
+        </div>
+        <script>document.querySelector('.contact--page').style.left = '0px'</script>
+        ");
 
       }
       else if(isset($_GET['success']))
       {
           $msg="message is sent successfully.";
-          echo ( "<div style=' border: 3px solid #fff; border-radius: 35px; padding: 0px 6rem; font-family: sans-serif; background-color: #04aa49;><p>".$msg."</p></div>");
+          echo ( "
+          <div style=' border: 3px solid #fff; border-radius: 35px; padding: 0px 6rem; font-family: sans-serif; background-color: #04aa49;'>
+            <p>".$msg."</p>
+          </div>
+          <script>document.querySelector('.contact--page').style.left = '0px'</script>
+          ");
           
       }
       ?>
