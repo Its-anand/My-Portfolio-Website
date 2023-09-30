@@ -271,13 +271,19 @@ if($productresult)
     <div id="footer_holder">
       <div id="footer">
         <div id="contact_form">
-          <form action="./Index_files/Data/contactus/process.php" method="post" id="contactusform">
+          <form action="./Index_files/Data/contactus/contact.php" method="post" id="contactusform">
             <h2 style="font-weight: 400;">Contact Us</h2>
             <?php 
           $msg= "";
-          if(isset($_GET['error']))
+          if(isset($_GET['mailerror']))
           {
-              $msg="Please fill all the option";
+              $msg="Mail service is not available right now";
+              echo ( "<div style=' width: 100%; height: 3rem; background-color: #04aa49; margin:2rem 0; box-sizing:border-box; '><p style='padding:3% 0;'>".$msg."</p></div>");
+              ;
+          }
+          if(isset($_GET['submit']))
+          {
+              $msg="Please fill the form properly";
               echo ( "<div style=' width: 100%; height: 3rem; background-color: #04aa49; margin:2rem 0; box-sizing:border-box; '><p style='padding:3% 0;'>".$msg."</p></div>");
               ;
           }
@@ -292,7 +298,7 @@ if($productresult)
             <input type="email" name="email" id="email" placeholder="Enter Email">
             <textarea name="msg" placeholder="Write Your Message..." id="message" cols="30" rows="10"
               form="contactusform"></textarea>
-            <input type="submit" name="Submit" id="submit" placeholder="Enter Submit" style="width: 40%;">
+            <input type="submit" name="submit" id="submit" placeholder="Enter Submit" style="width: 40%;">
             <input type="reset" value="reset" id="reset" placeholder="Enter Reset" style="width: 40%;">
           </form>
         </div>
