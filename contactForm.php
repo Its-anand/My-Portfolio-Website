@@ -17,6 +17,10 @@ if(isset($_POST['submit']))
         {
             header('location:index.php?success');
         }
+        else{
+            header('location:index.php?mailerror');
+
+        }
     }
 }
 else 

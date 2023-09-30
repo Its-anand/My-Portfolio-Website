@@ -408,6 +408,11 @@ progress::-moz-progress-bar {
           echo ( "<div style=' border: 3px solid #fff; border-radius: 35px; padding: 0px 6rem; font-family: sans-serif; background-color: #f53030;'><p>".$msg."</p></div>");
         
       }
+      else if(isset($_GET['mailerror'])){
+        $msg="Error occur while sending the message";
+        echo ( "<div style=' border: 3px solid #fff; border-radius: 35px; padding: 0px 6rem; font-family: sans-serif; background-color: #f53030;'><p>".$msg."</p></div>");
+
+      }
       else if(isset($_GET['success']))
       {
           $msg="message is sent successfully.";
