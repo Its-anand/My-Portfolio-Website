@@ -36,16 +36,16 @@ if(isset($_POST['buynow']))
         {
 
             $query = "SELECT * FROM `purehealth_id` WHERE `id` = '5'";
-            $result = mysqli_query($con,$query);
+            $result_key = mysqli_query($con,$query);
             
-            if($result_value)
+            if($result_key)
             {
-                if(mysqli_num_rows($result_value)==1)
+                if(mysqli_num_rows($result_key)==1)
                 {
                     $result_value_fetch=mysqli_fetch_assoc($result_value);
                     $value = $result_value_fetch['dsf43t34gaega4'];
                     $value = ltrim($value, 'PUREHEALTH');
-                    echo("<br>".$value);
+                    
                 }
                     else{
                         echo"
