@@ -32,9 +32,39 @@ if(isset($_POST['buynow']))
     $result = mysqli_query($con,$query);
     if($result)
     {
-        $a = mysqli_num_rows($result);
         if(mysqli_num_rows($result)==1)
         {
+
+            $query = "SELECT * FROM `purehealth_id` WHERE `id` = '5'";
+            $result = mysqli_query($con,$query);
+            
+            if($result_value)
+            {
+                if(mysqli_num_rows($result_value)==1)
+                {
+                    $result_value_fetch=mysqli_fetch_assoc($result_value);
+                    $value = $result_value_fetch['dsf43t34gaega4'];
+                    $value = ltrim($value, 'PUREHEALTH');
+                    echo("<br>".$value);
+                }
+                    else{
+                        echo"
+                        <script>
+                            alert('No key found');
+                            window.location.href='../account and card/card.php';
+                        </script>
+                        ";
+                    }
+            }
+            else{
+                echo"
+                <script>
+                    alert('Unable to connect with database');
+                    window.location.href='../account and card/card.php';
+                </script>
+                ";
+            }
+            
           $result_fetch=mysqli_fetch_assoc($result);
           
           $email = $result_fetch['email'];
@@ -46,7 +76,7 @@ if(isset($_POST['buynow']))
           $product_name =$_POST['product_name'];
           $product_price = $_POST['product_price'];
           $product_id =$_POST['product_id'];
-          $api_key = "rzp_test_rxfcWRod9TA6G5"; //Add your api key here which you got from razor pay.
+          $api_key = "$value"; //Add your api key here which you got from razor pay.
           
           date_default_timezone_set('Asia/kolkata');
           $date=date("Y-m-d");
@@ -58,7 +88,6 @@ if(isset($_POST['buynow']))
                 <script>
                     alert('Unable to fetch data');
                     window.location.href='../account and card/card.php';
-
                 </script>
                 ";
         }

@@ -25,20 +25,53 @@ if(isset($_POST['submit'])){
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
+$query = "SELECT * FROM `purehealth_id` WHERE `id` = '3'";
+$query1 = "SELECT * FROM `purehealth_id` WHERE `id` = '4'";
+
+    $result = mysqli_query($con,$query);
+    $result1 = mysqli_query($con,$query2);
+    if($result && $result1)
+    {
+        if(mysqli_num_rows($result)==1 && mysqli_num_rows($result1)==1)
+        {
+            $result_fetch=mysqli_fetch_assoc($result);
+            $result_fetch1=mysqli_fetch_assoc($result1);
+
+            $value = $result_fetch['dsf43t34gaega4'];
+            $value1 = $result_fetch1['dsf43t34gaega4'];
+        }
+        else{
+            echo"
+            <script>
+                alert('No key found');
+                window.location.href='../../../index.php';
+            </script>
+            ";
+        }
+}
+else{
+    echo"
+    <script>
+        alert('Unable to connect with database');
+        window.location.href='../../../index.php';
+    </script>
+    ";
+}
+
 try {
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'mail.anandchoudhary.in';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'contact@anandchoudhary.in';                     //SMTP username
-    $mail->Password   = 'PJwV4v8Ru6';                               //SMTP password
+    $mail->Username   = "$value";                     //SMTP username
+    $mail->Password   = "$value1";                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
     $mail->setFrom("$userEmail", "$userEmail");        //Bhejne wala: pele jisne bheja uski email fir uska name jiski jage me fir se uski email daldi
-    $mail->addAddress("contact@anandchoudhary.in", 'Me');     //Jisko Bhej rahe he wo: Khud ko bheja kyoki contact me form he or khud ka name
+    $mail->addAddress("noreply@anandchoudhary.in", 'Me');     //Jisko Bhej rahe he wo: Khud ko bheja kyoki contact me form he or khud ka name
     // $mail->addAddress('ellen@example.com');               //Name is optional
     // $mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');
