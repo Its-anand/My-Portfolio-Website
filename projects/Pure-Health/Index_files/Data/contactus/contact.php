@@ -1,4 +1,5 @@
 <?php
+include '../connection.php';
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -9,20 +10,37 @@ use PHPMailer\PHPMailer\Exception;
 include './PHPMailer/Exception.php';
 include './PHPMailer/PHPMailer.php';
 include './PHPMailer/SMTP.php';
+
+$userEmail = $_POST['email'];
+$subject = $_POST['subject'];
+$message = $_POST['msg'];
+
+if(isset($_POST['submit'])){
+
+    if(empty($subject) || empty($userEmail) || empty($message))
+    {
+        header('location:../../../index.php?error#footer1');
+    }
+    else{
+
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
+
 $query = "SELECT * FROM `purehealth_id` WHERE `id` = '3'";
 $query1 = "SELECT * FROM `purehealth_id` WHERE `id` = '4'";
-
     $result = mysqli_query($con,$query);
-    $result1 = mysqli_query($con,$query2);
+    $result1 = mysqli_query($con,$query1);
     if($result && $result1)
     {
         if(mysqli_num_rows($result)==1 && mysqli_num_rows($result1)==1)
         {
             $result_fetch=mysqli_fetch_assoc($result);
             $result_fetch1=mysqli_fetch_assoc($result1);
-
             $value = $result_fetch['dsf43t34gaega4'];
             $value1 = $result_fetch1['dsf43t34gaega4'];
+
+            echo($value." ");
+            echo($value1);
         }
         else{
             echo"
@@ -41,22 +59,6 @@ else{
     </script>
     ";
 }
-$userEmail = $_POST['email'];
-$subject = $_POST['subject'];
-$message = $_POST['msg'];
-
-if(isset($_POST['submit'])){
-
-    if(empty($subject) || empty($userEmail) || empty($message))
-    {
-        header('location:../../../index.php?error#footer1');
-    }
-    else{
-
-//Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer(true);
-
-
 
 try {
     //Server settings
