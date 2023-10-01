@@ -28,27 +28,35 @@ $mail = new PHPMailer(true);
 
 $query = "SELECT * FROM `purehealth_id` WHERE `id` = '3'";
 $query1 = "SELECT * FROM `purehealth_id` WHERE `id` = '4'";
-
     $result = mysqli_query($con,$query);
-    $result1 = mysqli_query($con,$query2);
+    $result1 = mysqli_query($con,$query1);
     if($result && $result1)
     {
         if(mysqli_num_rows($result)==1 && mysqli_num_rows($result1)==1)
         {
             $result_fetch=mysqli_fetch_assoc($result);
             $result_fetch1=mysqli_fetch_assoc($result1);
-
             $value = $result_fetch['dsf43t34gaega4'];
             $value1 = $result_fetch1['dsf43t34gaega4'];
-        }
-            else{
-                echo("No value found");
-            }
-    }
-    else{
-        echo("Unable to connect to the database");
-    }
 
+            echo($value." ");
+            echo($value1);
+        }
+        else{
+            echo"
+            <script>
+                alert('No key found');
+            </script>
+            ";
+        }
+}
+else{
+    echo"
+    <script>
+        alert('Unable to connect with database');
+    </script>
+    ";
+}
 try {
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output

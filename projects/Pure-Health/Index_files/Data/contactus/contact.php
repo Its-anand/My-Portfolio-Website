@@ -9,22 +9,6 @@ use PHPMailer\PHPMailer\Exception;
 include './PHPMailer/Exception.php';
 include './PHPMailer/PHPMailer.php';
 include './PHPMailer/SMTP.php';
-
-$userEmail = $_POST['email'];
-$subject = $_POST['subject'];
-$message = $_POST['msg'];
-
-if(isset($_POST['submit'])){
-
-    if(empty($subject) || empty($userEmail) || empty($message))
-    {
-        header('location:../../../index.php?error#footer1');
-    }
-    else{
-
-//Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer(true);
-
 $query = "SELECT * FROM `purehealth_id` WHERE `id` = '3'";
 $query1 = "SELECT * FROM `purehealth_id` WHERE `id` = '4'";
 
@@ -57,6 +41,22 @@ else{
     </script>
     ";
 }
+$userEmail = $_POST['email'];
+$subject = $_POST['subject'];
+$message = $_POST['msg'];
+
+if(isset($_POST['submit'])){
+
+    if(empty($subject) || empty($userEmail) || empty($message))
+    {
+        header('location:../../../index.php?error#footer1');
+    }
+    else{
+
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
+
+
 
 try {
     //Server settings
