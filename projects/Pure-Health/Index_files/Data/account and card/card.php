@@ -424,9 +424,7 @@ while($result_fetched = mysqli_fetch_array($result))
     </div></button></form>
     
         <a href="<?php echo $res['pageurl']; ?>">
-          <?php
-          echo '<img src="data:image/jpeg;base64,'.base64_encode( $res['image'] ).'" alt="Image">'
-          ?><hr>
+        <img src="<?php echo $res['image'];?>"><hr>
         </a>
         <div class="item_holder">
          <h2 class="heading"><?php echo $res['product_name']; ?></h2>

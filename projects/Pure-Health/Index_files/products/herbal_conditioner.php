@@ -36,9 +36,7 @@ session_start();
 <div id="left_div">
     <div id="title_of_product"><h1 ><?php echo $res['product_name']; ?></h1></div>
     <div id="image_holder">
-    <?php
-    echo '<img src="data:image/jpeg;base64,'.base64_encode( $res['image'] ).'" alt="facewash">'
-    ?></div>
+    <img src="<?php echo $res['image'];?>"></div>
     <h2 id="price_text">Price- <?php echo $res['price']; ?>/-</h2>    
     <?php
       if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
