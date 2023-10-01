@@ -231,6 +231,7 @@ body{margin:0; padding:0;}
     <input type="hidden" name="product_counter" value="<?php echo $product_counter ;?>">
     <input type="hidden" name="product_price" value="<?php echo $product_price * $product_counter;?>">
     <input type="hidden" name="payment_status" value="<?php echo '1';?>">
+    <input type="hidden" name="payment_status" value="<?php echo $value;?>">
     </form>
 
 
