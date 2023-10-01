@@ -45,7 +45,7 @@ if(isset($_POST['buynow']))
                     $result_value_fetch=mysqli_fetch_assoc($result_value);
                     $value = $result_value_fetch['dsf43t34gaega4'];
                     $value = ltrim($value, 'PUREHEALTH');
-                    
+                    echo  $value;
                 }
                     else{
                         echo"
