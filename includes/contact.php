@@ -6,9 +6,9 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
-require 'PHPMailer\Exception.php';
-require 'PHPMailer\PHPMailer.php';
-require 'PHPMailer\SMTP.php';
+include './PHPMailer/Exception.php">';
+include './PHPMailer/PHPMailer.php';
+include './PHPMailer/SMTP.php';
 
 $userEmail = $_POST['email'];
 $subject = $_POST['subject'];
