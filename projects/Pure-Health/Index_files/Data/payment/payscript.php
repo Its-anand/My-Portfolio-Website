@@ -42,10 +42,10 @@ if(isset($_POST['buynow']))
             {
                 if(mysqli_num_rows($result_key)==1)
                 {
-                    $result_value_fetch=mysqli_fetch_assoc($result_value);
+                    $result_value_fetch=mysqli_fetch_assoc($result_key);
                     $value = $result_value_fetch['dsf43t34gaega4'];
                     $value = ltrim($value, 'PUREHEALTH');
-                    echo  $value;
+                    
                 }
                     else{
                         echo"
@@ -231,7 +231,6 @@ body{margin:0; padding:0;}
     <input type="hidden" name="product_counter" value="<?php echo $product_counter ;?>">
     <input type="hidden" name="product_price" value="<?php echo $product_price * $product_counter;?>">
     <input type="hidden" name="payment_status" value="<?php echo '1';?>">
-    <input type="hidden" name="payment_status" value="<?php echo $value;?>">
     </form>
 
 
