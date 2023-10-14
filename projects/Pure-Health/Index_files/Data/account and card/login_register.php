@@ -56,7 +56,6 @@ if(isset($_POST['login']))
         if(mysqli_num_rows($result)==1)
         {
             $result_fetch=mysqli_fetch_assoc($result);
-            echo($result_fetch['password']);
             if($result_fetch['is_verified']==1)
             {
                 if(password_verify($_POST['password'],$result_fetch['password']))
