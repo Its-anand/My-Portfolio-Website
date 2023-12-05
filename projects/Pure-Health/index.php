@@ -17,7 +17,9 @@ session_start();
 
 <body onload="loader()">
   <div id="loading">
-
+      <div>
+        
+      </div>
   </div>
   <header>
     <div id="fheader">

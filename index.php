@@ -106,10 +106,10 @@ progress::-moz-progress-bar {
             three
             CSS-only sites, among others.&#160;</span>
           <br><br>
-          <div class="resumeBtn" type="button">
+          <a  href="https://drive.google.com/file/d/11Fei3diOhqnFoUCazAbEf8TiKnz5F3ji/view?usp=sharing" target="_blank" class="resumeBtn" type="button">
             <span>Resume</span>
             <img class="resumeDownloadIcon" src="./Images/Download Icon.svg" alt="">
-          </div>
+          </a>
         </section>
       </section>
 
@@ -281,7 +281,7 @@ progress::-moz-progress-bar {
           <div class="date">September 2023</div>
           <div class="blogsListContainer">
 
-            <a href="https://github.com/Its-anand/Pure-Health" class="blogs">
+            <a href="./pages/introduction.html" class="blogs">
               <div class="blogsDescription">
                 <p>An informal introduction</p>
               </div>

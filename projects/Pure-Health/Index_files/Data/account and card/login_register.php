@@ -47,7 +47,7 @@ function sendMail($email,$v_code)
    }*/
 #This is the code for login
 if(isset($_POST['login']))
-{
+{  
     $query = "SELECT * FROM `purehealth_registered_users` WHERE  `email`= '$_POST[email_username]' OR `username`='$_POST[email_username]'";
     $result = mysqli_query($con,$query);
     
