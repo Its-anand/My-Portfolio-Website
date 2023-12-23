@@ -158,6 +158,19 @@ progress::-moz-progress-bar {
 
         <div class='swiper mySwiper'>
           <div class='swiper-wrapper'>
+
+          <div class='swiper-slide'>
+              <a class='projects' href='/projects/Travel-with-strangers/index.php'>
+                <div class='projectDescription'>
+                  <p>Travel with strangers with razorpay</p>
+                </div>
+                <div id='projectViewButton'>
+                  <p>view</p>
+                  <svg fill='none' height='50' viewBox='0 0 63 50' width='63' xmlns='http://www.w3.org/2000/svg'> <path d='M0 26.5H60M60 26.5L38 1.5M60 26.5L38 48' stroke='white' stroke-width='3'/></svg>
+                </div>
+              </a>
+          </div>
+
             <div class='swiper-slide'>
               <a class='projects' href='/projects/Pure-Health/index.php' target='_blank'>
                 <div class='projectDescription'>
