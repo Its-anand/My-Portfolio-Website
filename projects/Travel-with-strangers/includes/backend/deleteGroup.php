@@ -53,7 +53,7 @@ session_start();
         }
     }
     else{
-        alert("Unauthorized glass","D","../../Index.php");
+        alert("Unauthorized glass","D","../../index.php");
     }
   
 ?>

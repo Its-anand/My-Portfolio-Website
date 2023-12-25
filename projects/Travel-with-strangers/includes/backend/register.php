@@ -39,11 +39,11 @@ $mail = new PHPMailer(true);
 
         }
         else{
-            alert('No key found','D','../../Index.php');
+            alert('No key found','D','../../index.php');
         }
     }
     else{
-        alert('Unable to connect with database','D','../../Index.php');
+        alert('Unable to connect with database','D','../../index.php');
     }
 try {
     //Server settings
@@ -372,7 +372,7 @@ if(isset($_POST['user-registration']))
             $result_fetch=mysqli_fetch_assoc($result);
             if($result_fetch['user_email']==$_POST['user_email'])
             {
-                alert('You have already registered','W','../../Index.php');
+                alert('You have already registered','W','../../index.php');
             }
         }
         else
@@ -389,13 +389,13 @@ if(isset($_POST['user-registration']))
                 $uploadOk = 1;
 
                 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "webp" ) {
-                  alert( "Sorry, only JPG, JPEG, PNG & webp files are allowed.",'D','../../Index.php');
+                  alert( "Sorry, only JPG, JPEG, PNG & webp files are allowed.",'D','../../index.php');
                   $uploadOk = 0;
                 }
                 else{
                       // Check if $uploadOk is set to 0 by an error
                       if ($uploadOk == 0) {
-                      alert( "Sorry, your image was not uploaded.",'D','../../Index.php');
+                      alert( "Sorry, your image was not uploaded.",'D','../../index.php');
                       // if everything is ok, try to upload file
                       } else {
                         if (move_uploaded_file($_FILES["user_profile_image"]["tmp_name"], $target_file)) {
@@ -404,29 +404,29 @@ if(isset($_POST['user-registration']))
                           $query="INSERT INTO `travel_with_strangers_registration_user`(`user_profile_image`, `user_role`, `username`, `user_email`, `user_password`, `user_location`, `verification_code`, `is_verified`) VALUES ('$target_file','$_POST[user_role]','$_POST[username]','$_POST[user_email]','$password','$_POST[user_location]','$v_code','0')";
                           if(mysqli_query($con,$query) && sendMail($_POST['user_email'],$v_code)) 
                           {
-                             alert('Registration successful! Check you mail to verify email','S','../../Index.php');
+                             alert('Registration successful! Check you mail to verify email','S','../../index.php');
                  
                           }
                           else
                           {
-                                 alert('Email service or database not working','D','../../Index.php');
+                                 alert('Email service or database not working','D','../../index.php');
                           }
                         } 
                         else {
-                          alert( "Sorry, there was an error uploading your file.",'D','../../Index.php');
+                          alert( "Sorry, there was an error uploading your file.",'D','../../index.php');
                         }
                         }
                 }
               } 
               else {
-                alert( "File is not an image.",'D','../../Index.php');
+                alert( "File is not an image.",'D','../../index.php');
                 $uploadOk = 0;
               }
         }
     } 
     else
     {
-        alert('Unable to put data into database','D','../../Index.php');
+        alert('Unable to put data into database','D','../../index.php');
     }
 }
 ?>
