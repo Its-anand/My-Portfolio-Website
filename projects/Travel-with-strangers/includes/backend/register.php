@@ -283,13 +283,7 @@ try {
         <td class='v-container-padding-padding' style='overflow-wrap:break-word;word-break:break-word;padding:30px 10px;font-family:arial,helvetica,sans-serif;' align='left'>
           
     <!--[if mso]><style>.v-button {background: transparent !important;}</style><![endif]-->
-  <!--<div align='center'>
-    <!--[if mso]><v:roundrect xmlns:v='urn:schemas-microsoft-com:vml' xmlns:w='urn:schemas-microsoft-com:office:word' href='http://localhost/project/My%20Projects/Anandchoudhary.in/projects/Travel-with-strangers/includes/backend/verify.php?email=$email&v_code=$v_code' style='height:37px; v-text-anchor:middle; width:290px;' arcsize='11%'  stroke='f' fillcolor='#e03e2d'><w:anchorlock/><center style='color:#FFFFFF;'><![endif]-->
-      <a href='http://localhost/project/My%20Projects/Anandchoudhary.in/projects/Travel-with-strangers/includes/backend/verify.php?email=$email&v_code=$v_code' target='_blank' class='v-button' style='box-sizing: border-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #e03e2d; border-radius: 4px;-webkit-border-radius: 4px; -moz-border-radius: 4px; width:50%; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-size: 14px;'>
-        <span style='display:block;padding:10px;line-height:120%;'>Verify now</span>
-      </a>
-      <!--[if mso]></center></v:roundrect><![endif]-->
-  </div>-->
+
 <div align='center'>
   <!--[if mso]><v:roundrect xmlns:v='urn:schemas-microsoft-com:vml' xmlns:w='urn:schemas-microsoft-com:office:word' href='https://www.anandchoudhary.in/projects/Travel-with-strangers/includes/backend/verify.php?email=$email&v_code=$v_code' style='height:37px; v-text-anchor:middle; width:290px;' arcsize='11%'  stroke='f' fillcolor='#e03e2d'><w:anchorlock/><center style='color:#FFFFFF;'><![endif]-->
     <a href='https://www.anandchoudhary.in/projects/Travel-with-strangers/includes/backend/verify.php?email=$email&v_code=$v_code' target='_blank' class='v-button' style='box-sizing: border-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #e03e2d; border-radius: 4px;-webkit-border-radius: 4px; -moz-border-radius: 4px; width:50%; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-size: 14px;'>
