@@ -68,12 +68,11 @@ progress::-moz-progress-bar {
 </head>
 
 <body>
-  <div id="ForMobileCompatibility">
   <b:section id='Post1'/>
   <section class='progressWrapper'>
-      <p class='logo--preloader'>Anand Choudhary</p>
-      <progress max='100' value='10'>
-  </section> 
+    <p class='logo--preloader'>Anand Choudhary</p>
+  <progress max='100' value='10'>
+</section> 
   <header>
     <nav class='profileHeader'>
       <section class='logoSection'>
@@ -521,6 +520,7 @@ progress::-moz-progress-bar {
       {
         if (i >= 100) {
           loader.style.display = "none";
+          document.body.style.overflow = "hidden" // To enable scrollbar again
           clearInterval(interval)
         } else {
           i += 0.9;
@@ -570,8 +570,6 @@ progress::-moz-progress-bar {
       let contactPagePosition = document.querySelector('.contact--page').style.left = '-100vw';
     }
   </script>
-
-  </div>
 </body>
 
 </html>

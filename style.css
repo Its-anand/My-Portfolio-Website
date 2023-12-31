@@ -10,9 +10,14 @@ body {
   background-color: var(--bgcolor);
   height: 100vh;
   font-family: 'Bree Serif', serif;
-  overflow: hidden;
+  
 }
+/*-------------This code is used because overflow hidden don't work in mobile------------------*/
 
+#ForMobileCompatibility{
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
 a {
   color: var(--color);
   text-decoration: none;
