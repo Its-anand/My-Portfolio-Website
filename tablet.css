@@ -1,0 +1,183 @@
+@media screen and (max-width:1025px){
+    .contactlinks{
+        display: none;
+    }
+    .contact--grid-property-container {
+        grid-template-columns: 1fr;
+    }
+    .contactMe--form {
+        width: 32rem;
+        height: 31rem;
+    }
+    #profile {
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .descriptionContainer, .profilePictureContainer{
+        width: 100vw;
+    }
+    .profilePictureImageContainer {
+        width: 34.5rem;
+        height: 34rem;
+    }
+
+    .profilePictureContainer {
+        justify-content: flex-end;
+    }
+    .profilePictureFrame {
+      margin-top: unset; 
+      width: 35.5rem;
+      height: 34.8rem;
+    }
+
+    /*Description*/
+    .description {
+        width: 100%;
+        padding: 0 4rem;
+    }
+    .helloWord, .thereWord {
+        font-size: 4.4rem;
+    }
+    .descriptionSentence {
+        font-size: 2.4rem;
+    }
+
+    /*Resume button*/
+    .resumeBtn {
+        width: 14rem;
+        height: 4rem;
+        font-size: 2rem;
+    }
+    .resumeDownloadIcon {
+        width: 33px;
+    }
+    /*skill */
+
+    .skillsDataHolder {
+        width: 100vw;
+    }
+    .skills {
+        padding-left: 0rem;
+    }
+    .blogsDataHolder {
+        padding: 2rem;
+        width: 100%;
+    }
+        /*Project*/
+
+    .projectDetailcontainer {
+        width: 100vw;
+        position: relative;
+    }
+    .description {
+        padding: 0 2rem;
+    }
+    .socialMedia {
+        width: 14rem;
+        padding-left: 1.188rem;
+    }
+    .logoSection {
+        width: 13.3rem;
+    }
+}
+@media screen and (max-width:820px){
+    /*header*/
+    .logoSection {
+        width: 13.3rem;
+    }
+    .navigation {
+        width: 24rem;
+        padding: unset;
+    }
+    .socialMedia {
+        width: 13rem;
+        padding-left: 0.4rem;
+    }
+    .profilePictureImageContainer {
+        width: 30.5rem;
+        height: 30rem;
+    }
+    .profilePictureFrame {
+        width: 31.5rem;
+        height: 30.8rem;
+    }
+    .helloWord, .thereWord {
+        font-size: 3.4rem;
+    }
+    .descriptionSentence {
+        font-size: 1.8rem;
+    }
+    .description {
+        padding: 0 2rem;
+    }
+    .resumeBtn {
+        border: 3px solid var(--color);
+        width: 10rem;
+        font-size: 1.4rem;
+    }
+    .skills {
+        padding-left: 0rem;
+    }
+    .blogsDataHolder {
+        padding: 2rem;
+        width: 100%;
+    }
+    .certificate--image {
+        width: 89%;
+        height: 30rem;
+    }
+    .certificate--word-decoration-left-line, .certificate--word-decoration-right-line{
+        display: none;
+    }
+}
+@media screen and (max-width:768px){
+    .profilePictureFrame {
+        width: 26.5rem;
+        height: 25.8rem;
+    }
+    .profilePictureImageContainer {
+        width: 25.5rem;
+        height: 25rem;
+    }
+
+}
+@media screen and (max-width:768px){
+    .arrowAnimation {
+        height: 37rem;
+    }
+    .skillsList {
+        font-size: 2.8rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width:668px){
+    .helloWord, .thereWord {
+        font-size: 2.6rem;
+    }
+    .logo--preloader {
+        font-size: 2.5rem;
+    }
+    .navigation{
+        display: none;
+    }
+    .navigationButton{
+        display: flex;
+    }
+    nav {
+
+        align-items: center;
+    }
+    .navigationButton{
+        margin-right: 1rem;
+        cursor: pointer;
+    }
+    .topLine, .bottomLine {
+        width: 2.6rem;
+        border: 0.1rem solid var(--color);
+    }
+    .centerLine {
+        width: 1.7rem;
+        border: 0.15rem solid var(--color);
+    }
+}

@@ -1,0 +1,160 @@
+@media screen and (max-width: 1300px){
+    .helloWord, .thereWord {
+      font-size: 2rem;
+    }
+    .descriptionSentence {
+      font-size: 1.7rem;
+    }
+    .profilePictureImageContainer {
+      width: 31.5rem;
+      height: 30rem;
+    }
+    .profilePictureFrame {
+      width: 33.5rem;
+      height: 30.8rem;
+      margin-left: -3rem;
+  
+    }
+    .description {
+      width: 33rem;
+      margin-right: -2rem;
+    }
+  }
+  
+  @media screen and (max-width: 1190px){
+    .description {
+      width: 28rem;
+  }
+  .descriptionSentence {
+    font-size: 1.5rem;
+  }
+  .helloWord, .thereWord {
+    font-size: 1.8rem;
+  }
+  .profilePictureFrame {
+    width: 31.5rem;
+    height: 28.8rem;
+    margin-left: -4rem;
+  }
+  .profilePictureImageContainer {
+    width: 29.5rem;
+    height: 28rem;
+  }
+  /*Swiper js*/
+  .projectDetailcontainer {
+    width: 59rem;
+    position: relative;
+  }
+  }
+  @media screen and (max-width: 1130px){
+
+    .profilePictureImageContainer {
+      width: 27.5rem;
+      height: 26rem;
+  }
+  
+  .profilePictureFrame {
+    width: 29.5rem;
+    height: 26.8rem;
+    margin-left: -1rem;
+  }
+  }
+  @media screen and (max-width: 1090px){
+
+    /*Pre Loader*/
+    .logo--preloader {
+        font-size: 3rem;
+    }
+    progress {
+        width: 57vw;
+        height: 2.5rem;
+    }
+  /*Profile Picture*/
+  .profilePictureImageContainer {
+    width: 24.5rem;
+    height: 23rem;
+}
+  
+.profilePictureFrame {
+    width: 26.5rem;
+    height: 23.8rem;
+}
+  .descriptionSentence {
+    font-size: 1.3rem;
+  }
+  .descriptionContainer {
+  
+    justify-content: flex-start;
+    padding-left: 3rem;
+  }
+  .description {
+    width: 100%;
+  }
+  .profilePictureContainer {
+    justify-content: flex-end;
+    padding-right: 2.6rem;
+  }
+  /*Header*/
+  .logoSection {
+    width: 13.3rem;
+  }
+  .navigation {
+    width: 26rem;
+  }
+  /*Footer*/
+  .socialMedia {
+    width: 12rem;
+    padding-left: 0.5rem;
+  }
+  
+  /*Skill*/
+  .projectDetailcontainer {
+    width: 47rem;
+  }
+  .skillsDataHolder {
+    width: 53rem;
+    height: 24rem;
+  }
+  .skills {
+    padding-left: 1rem;
+  }
+  .arrowAnimation {
+    height: 20rem;
+}
+  .swiper {
+    width: 99%;
+  }
+  /*Project*/
+  .word--Project {
+    font-size: 2.2rem;
+  }
+  /*Blog*/
+  .blogsDataHolder {
+    padding: 2rem 0 4.5rem 0;
+  }
+  .blogs {
+    width: 14rem;
+    height: 15rem;
+  }
+  .word--blog {
+    font-size: 2.2rem;
+    width: unset;
+    padding-bottom: 0rem;
+  }
+  .word--blog {
+  }
+  /*Contact Me*/
+  .fancy--border {
+    width: 26rem;
+    height: 27rem;
+  }
+  .contactMe--form {
+  
+    width: 23rem;
+  }
+  .contactMe--form-container {
+  
+    padding-left: 1rem;
+    align-items: flex-start;
+  }
+  }

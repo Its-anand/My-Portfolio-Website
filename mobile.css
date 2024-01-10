@@ -1,0 +1,30 @@
+@media screen and (max-width:668px){
+    .helloWord, .thereWord {
+        font-size: 2.6rem;
+    }
+    .logo--preloader {
+        font-size: 2.5rem;
+    }
+    .navigation{
+        display: none;
+    }
+    .navigationButton{
+        display: flex;
+    }
+    nav {
+
+        align-items: center;
+    }
+    .navigationButton{
+        margin-right: 1rem;
+        cursor: pointer;
+    }
+    .topLine, .bottomLine {
+        width: 2.6rem;
+        border: 0.1rem solid var(--color);
+    }
+    .centerLine {
+        width: 1.7rem;
+        border: 0.15rem solid var(--color);
+    }
+}

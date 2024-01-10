@@ -9,9 +9,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Pirata+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-<link rel="stylesheet" href="style.css">
-  <title>Anand Choudhary</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="laptop.css" media="(min-width: 1090px and max-width: 1300px)">
+  <link rel="stylesheet" href="tablet.css" media="(min-width:568px) and (max-width:1025px)">
+  <link rel="stylesheet" href="mobile.css" media="(max-width:568px)">
+  <script>
+    window.addEventListener("resize", function() {
+  if (window.innerWidth < 360) {
+    alert("Mobile view is currently under construction");
+  } 
+});
+  </script>
+  <title>Anand Choudhary</title>
   <style>
     html {
       scroll-behavior: smooth;
@@ -85,13 +94,13 @@ progress::-moz-progress-bar {
         <a href="#skillsPage"><span class='menu'>Skills</span></a>
         <a href="#projectsPage"><span class='menu'>Projects</span></a>
         <a href="#blogsPage"><span class='menu'>Blogs</span></a>
-        <span class='menu'></span>
-        <span class='navigationButton'>
-          <div class='topLine' >
-          <div class='centerLine' >
-          <div class='bottomLine' >
-        </span>
+
       </section>
+      <span class='navigationButton'>
+          <div class='topLine' ></div>
+          <div class='centerLine' ></div>
+          <div class='bottomLine' ></div>
+      </span>
 
     </nav>
   </header>
