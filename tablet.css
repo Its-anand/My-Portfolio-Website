@@ -153,12 +153,12 @@
 }
 @media screen and (max-width:668px){
     .profilePictureImageContainer {
-        width: 15.5rem;
-        height: 15rem;
+        width: 18.5rem;
+        height: 18rem;
     }
     .profilePictureFrame {
-        width: 16.5rem;
-        height: 15.8rem;
+        width: 19.5rem;
+        height: 18.8rem;
     }
     .helloWord, .thereWord {
         font-size: 2rem;
@@ -190,14 +190,20 @@
     .navigationButton{
         margin-right: 1rem;
         cursor: pointer;
+        width: 2.3rem;
+        height: 1.6rem;
     }
     .topLine, .bottomLine {
-        width: 2.6rem;
+        width: 2.2rem;
         border: 0.1rem solid var(--color);
+        background-color: #fff;
+        border-radius: 4px;
     }
     .centerLine {
-        width: 1.7rem;
-        border: 0.15rem solid var(--color);
+        width: 1.5rem;
+        border: 0.1rem solid var(--color);
+        background-color: #fff;
+        border-radius: 4px;
     }
     #linkedin {
         width: 27px;
@@ -219,5 +225,13 @@
 @media screen and (max-width:550px){
     .description {
         padding: 0 1rem;
+    }
+    .profilePictureImageContainer {
+        width: 15.5rem;
+        height: 15rem;
+    }
+    .profilePictureFrame {
+        width: 16.5rem;
+        height: 15.8rem;
     }
 }
