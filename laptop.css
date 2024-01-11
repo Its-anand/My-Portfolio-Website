@@ -1,4 +1,4 @@
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1300px) and (orientation: landscape){
     .helloWord, .thereWord {
       font-size: 2rem;
     }
@@ -21,7 +21,7 @@
     }
   }
   
-  @media screen and (max-width: 1190px){
+  @media screen and (max-width: 1190px) and (orientation: landscape){
     .description {
       width: 28rem;
   }
@@ -46,7 +46,7 @@
     position: relative;
   }
   }
-  @media screen and (max-width: 1130px){
+  @media screen and (max-width: 1130px) and (orientation: landscape){
 
     .profilePictureImageContainer {
       width: 27.5rem;
@@ -59,7 +59,7 @@
     margin-left: -1rem;
   }
   }
-  @media screen and (max-width: 1090px){
+  @media screen and (max-width: 1090px) and (orientation: landscape){
 
     /*Pre Loader*/
     .logo--preloader {

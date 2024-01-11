@@ -44,7 +44,7 @@ if(isset($_SERVER['HTTPS']) && $_SERVER['HTTP'] === 'on')
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Acropolis Notice Board</title>
-   <link rel="stylesheet" href="./index_files/css_and_script/NoticePageCss.css">
+   <link rel="stylesheet" href="./index_files/css_and_script/NoticePageCSS.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <link href='https://fonts.googleapis.com/css?family=Fredericka the Great' rel='stylesheet'>
 

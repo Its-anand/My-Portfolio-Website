@@ -10,15 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Pirata+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="laptop.css" media="(min-width: 1090px and max-width: 1300px)">
-  <link rel="stylesheet" href="tablet.css" media="(max-width:700px)">
-  <script>
+  <link rel="stylesheet" href="laptop.css" media="(min-width: 1025px and max-width: 1300px)">
+  <link rel="stylesheet" href="tablet.css" media="(max-width:1025px)">
+  <!-- <script>
     window.addEventListener("resize", function() {
   if (window.innerWidth < 360) {
     alert("Mobile view is currently under construction");
   } 
 });
-  </script>
+  </script> -->
   <title>Anand Choudhary</title>
   <style>
     html {
@@ -83,18 +83,27 @@ progress::-moz-progress-bar {
       <progress max='100' value='10'>
   </section> 
   <header>
+
+  <section id="mobileNav">
+      <a href="#profile"><span class='menu'>About me</span></a>
+        <a href="#skillsPage"><span class='menu'>Skills</span></a>
+        <a href="#projectsPage"><span class='menu'>Projects</span></a>
+        <a href="#blogsPage"><span class='menu'>Blogs</span></a>
+  </section>
+
     <nav class='profileHeader'>
       <section class='logoSection'>
         <a class='logo' href='https://www.anandchoudhary.in/'>Anand Choudhary</a>
       </section>
       <section class='navigation'>
-
+        
         <a href="#profile"><span class='menu'>About me</span></a>
         <a href="#skillsPage"><span class='menu'>Skills</span></a>
         <a href="#projectsPage"><span class='menu'>Projects</span></a>
         <a href="#blogsPage"><span class='menu'>Blogs</span></a>
 
       </section>
+
       <span class='navigationButton'>
           <div class='topLine' ></div>
           <div class='centerLine' ></div>
@@ -169,7 +178,7 @@ progress::-moz-progress-bar {
           <div class='swiper-wrapper'>
 
           <div class='swiper-slide'>
-              <a class='projects' href='/projects/Travel-with-strangers/index.php'>
+              <a class='projects' href='/projects/Travel-with-strangers/index.php' target='_blank'>
                 <div class='projectDescription'>
                   <p>Travel with strangers with razorpay</p>
                 </div>
