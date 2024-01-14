@@ -398,7 +398,7 @@ else
       <ul>
          <li class="text">About</li>
          <p>
-            This web application is designed and created By <br> Anand Choudhary <br> Sakshi Telang <br> Vanshika Jain
+            This web application is designed and created By <br> Anand Choudhary 
          </p>
          <a id="go_back_btn" class="button_css about_btn">Go Back</a>
       </ul>
